@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 const TopRightBar = () => {
 
     const [selectedCountry, setSelectedCountry] = useState(null);
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
 
     const countries = [
         { name: "United States", value: "us" , flag: "https://flagcdn.com/16x12/us.png" },
@@ -26,6 +26,10 @@ const TopRightBar = () => {
             
        
     ];
+    const handleSelect = (country) => {
+        setSelectedCountry(country);
+        setIsOpen(false);
+    }
 
 
   return (
@@ -46,7 +50,10 @@ const TopRightBar = () => {
             </select>
 
                {/* custom DropDown */}
-               <div className=' w-[150px] border  p-2 coursor-pointer flex items-center'>
+               <div
+                className=' w-[150px] border  p-2 cursor-pointer flex items-center'
+                onClick={()=> setIsOpen(!isOpen)}
+                >
                 {
                     selectedCountry
                     ?
@@ -66,7 +73,11 @@ const TopRightBar = () => {
                {isOpen && (
                     <ul className='absolute w-[150px] border-gray-300 bg-white shadow-lg z-10'>
                         {countries.map((country, index)=>(
-                            <li className='flex items-center gap-2 p-2 hover:bg-gray-200 cursor-pointer'>
+                            <li
+                                key={country.value}
+                             className='flex items-center gap-2 p-2 hover:bg-gray-200 cursor-pointer'
+                             onClick={()=> handleSelect(country)}
+                             >
                                 <img src={country?.flag} alt={country?.name} className='w-5 h-4 mr-2'/>
                                 {country.name}
                             </li>
