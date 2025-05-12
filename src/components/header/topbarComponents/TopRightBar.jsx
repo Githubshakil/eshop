@@ -1,8 +1,63 @@
 import React from 'react'
 
 const TopRightBar = () => {
+
+    const [selectedCountry, setSelectedCountry] = React.useState(null);
+
+    const countries = [
+        { name: "United States", value: "us" , flag: "https://flagcdn.com/16x12/us.png" },
+        { name: "Spain", value: "es" , flag: "https://flagcdn.com/16x12/es.png" },
+        { name: "France", value: "fr" , flag: "https://flagcdn.com/16x12/fr.png" },
+        { name: "Germany", value: "de" , flag: "https://flagcdn.com/16x12/de.png" },
+        { name: "Italy", value: "it" , flag: "https://flagcdn.com/16x12/it.png" },
+        { name: "Portugal", value: "pt" , flag: "https://flagcdn.com/16x12/pt.png" },
+        { name: "Netherlands", value: "nl" , flag: "https://flagcdn.com/16x12/nl.png" },
+        { name: "Sweden", value: "se" , flag: "https://flagcdn.com/16x12/se.png" },
+        { name: "Norway", value: "no" , flag: "https://flagcdn.com/16x12/no.png" },
+        { name: "Denmark", value: "dk" , flag: "https://flagcdn.com/16x12/dk.png" },
+        { name: "Bangladesh", value: "bd" , flag: "https://flagcdn.com/16x12/bd.png" },
+        { name: "India", value: "in" , flag: "https://flagcdn.com/16x12/in.png" },
+        { name: "Pakistan", value: "pk" , flag: "https://flagcdn.com/16x12/pk.png" },
+        { name: "Nepal", value: "np" , flag: "https://flagcdn.com/16x12/np.png" },
+        { name: "Bhutan", value: "bt" , flag: "https://flagcdn.com/16x12/bt.png" },
+        { name: "Sri Lanka", value: "lk" , flag: "https://flagcdn.com/16x12/lk.png" },
+        { name: "Maldives", value: "mv" , flag: "https://flagcdn.com/16x12/mv.png" },
+            
+       
+    ];
+
+
   return (
-    <div className='flex justify-end items-center'>TopRightBar</div>
+    <div className='flex justify-end items-center gap-[49px]'>
+        <div>usd</div>
+        <div className='relative after:content-[""] after:bg-[#bfbfbf] after:absolute after:w-[1px] after:h-[32px] after:left-[-25px] after:top-[50%] after:-translate-[50%] before:content-[""] before:bg-[#bfbfbf] before:absolute before:w-[1px] before:h-[32px] before:right-[-25px] before:top-[50%] before:-translate-[50%]'>
+            <select className='w-[112px] hidden' name="country"
+            value={selectedCountry?.value || ""}
+            onChange={(e)=>{
+              const country = countries.find((c) => c.value === e.target.value)
+              setSelectedCountry(country);
+            }}
+            >
+               {countries.map((country, index)=>(
+                   <option value={country.value}>{country.name}</option>
+
+               ))}
+            </select>
+
+               {/* custom DropDown */}
+               <div className='border border-red-500 p-2 bg-green-500 coursor-pointer flex items-center'>
+                {selectedCountry ? (
+
+                ):<span>
+            }
+
+               </div>
+
+
+
+        </div>
+        <div>media</div>
+    </div>
   )
 }
 

@@ -10,7 +10,7 @@ const TopBar = () => {
   return (
     <div className='border-b border-[rgba(48,48,48,0.25)]  border-solid py-[22px]  '>
       <Container>
-        <div className='flex items-center justify-between '>
+        <div className='flex items-center justify-between font-["Montserrat"] font-normal text-[14px] '>
           <TopLeftBar />
           <TopRightBar />
         </div>
