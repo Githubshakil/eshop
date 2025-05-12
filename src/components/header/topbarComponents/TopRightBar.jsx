@@ -1,5 +1,9 @@
 import React, { useState } from 'react'
 import { FaAngleDown } from "react-icons/fa6";
+import { FaFacebookF } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const TopRightBar = () => {
 
@@ -81,7 +85,7 @@ const TopRightBar = () => {
                              onClick={()=> handleSelect(country)}
                              >
                                 <img src={country?.flag} alt={country?.name} className='w-5 h-4 mr-2'/>
-                                {country.value}
+                                {country.name}
                             </li>
                         ))}
                     </ul>
@@ -93,7 +97,11 @@ const TopRightBar = () => {
 
 
         </div>
-        <div>media</div>
+        <div className='flex items-center gap-5 cursor-pointer'>
+           <Link to={"#"}><FaFacebookF /></Link>
+           <Link to={"#"}><FaTwitter /></Link>
+           <Link to={"#"}><FaInstagram /></Link> 
+        </div>
     </div>
   )
 }
