@@ -43,11 +43,7 @@ const TopRightBar = () => {
         { name: "JPY", value: "JPY" },
         { name: "AUD", value: "AUD" },
         { name: "CAD", value: "CAD" },
-        { name: "CNY", value: "CNY" },
-        { name: "NZD", value: "NZD" },
-        { name: "SGD", value: "SGD" },
-        { name: "CHF", value: "CHF" },
-        { name: "MYR", value: "MYR" },
+        
     ]
 
     const handleSelect = (country) => {

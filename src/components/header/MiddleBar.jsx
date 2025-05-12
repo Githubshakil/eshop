@@ -21,7 +21,11 @@ const MiddleBar = () => {
             />
             <IoMdSearch className='text-3xl absolute top-1/2 right-6 -translate-y-1/2' />
           </div>
-          <div>cart</div>
+
+          
+          <div>
+            
+          </div>
           <div>account</div>
         </div>
       </div>
