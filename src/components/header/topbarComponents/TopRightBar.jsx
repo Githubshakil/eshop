@@ -9,6 +9,7 @@ const TopRightBar = () => {
 
     const [selectedCountry, setSelectedCountry] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
+    const [selectedCurrency, setSelectedCurrency] = useState("USD");
 
     const countries = [
         { name: "United State", value: "us" , flag: "https://flagcdn.com/16x12/us.png" },
@@ -31,6 +32,24 @@ const TopRightBar = () => {
             
        
     ];
+
+
+    const currency = [
+        { name: "USD", value: "USD" },
+        { name: "BDT", value: "BDT" },
+        { name: "EUR", value: "EUR" },
+        { name: "GBP", value: "GBP" },
+        { name: "INR", value: "INR" },
+        { name: "JPY", value: "JPY" },
+        { name: "AUD", value: "AUD" },
+        { name: "CAD", value: "CAD" },
+        { name: "CNY", value: "CNY" },
+        { name: "NZD", value: "NZD" },
+        { name: "SGD", value: "SGD" },
+        { name: "CHF", value: "CHF" },
+        { name: "MYR", value: "MYR" },
+    ]
+
     const handleSelect = (country) => {
         setSelectedCountry(country);
         setIsOpen(false);
@@ -39,7 +58,29 @@ const TopRightBar = () => {
 
   return (
     <div className='flex justify-end items-center gap-[49px]'>
-        <div>usd</div>
+        <div>
+            <select
+            name="currency"
+            value={selectedCurrency}
+            onChange={(e)=>{
+                const currency = e.target.value;
+                setSelectedCurrency(currency);
+                
+            }
+        }
+        >
+
+            {
+                currency.map((curr, index)=>(
+                    <option key={index} value={curr.value}>{curr.name}</option>
+                ))
+            }
+            </select>
+        </div>
+
+
+
+
         <div className='relative after:content-[""] after:bg-[#bfbfbf] after:absolute after:w-[1px] after:h-[32px] after:left-[-25px] after:top-[50%] after:-translate-[50%] before:content-[""] before:bg-[#bfbfbf] before:absolute before:w-[1px] before:h-[32px] before:right-[-25px] before:top-[50%] before:-translate-[50%]'>
             <select className='w-[150px] hidden' name="country"
             value={selectedCountry?.value || ""}
