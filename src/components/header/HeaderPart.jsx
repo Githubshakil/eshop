@@ -1,8 +1,15 @@
 import React from 'react'
+import TopBar from './TopBar'
+import MiddleBar from './MiddleBar'
+import BottomBar from './BottomBar'
 
 const HeaderPart = () => {
   return (
-    <div>HeaderPart</div>
+   <>
+        <TopBar />
+        <MiddleBar />
+        <BottomBar />
+   </>
   )
 }
 
