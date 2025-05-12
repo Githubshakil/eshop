@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { FaAngleDown } from "react-icons/fa6";
 
 const TopRightBar = () => {
 
@@ -6,7 +7,7 @@ const TopRightBar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const countries = [
-        { name: "United States", value: "us" , flag: "https://flagcdn.com/16x12/us.png" },
+        { name: "United State", value: "us" , flag: "https://flagcdn.com/16x12/us.png" },
         { name: "Spain", value: "es" , flag: "https://flagcdn.com/16x12/es.png" },
         { name: "France", value: "fr" , flag: "https://flagcdn.com/16x12/fr.png" },
         { name: "Germany", value: "de" , flag: "https://flagcdn.com/16x12/de.png" },
@@ -36,7 +37,7 @@ const TopRightBar = () => {
     <div className='flex justify-end items-center gap-[49px]'>
         <div>usd</div>
         <div className='relative after:content-[""] after:bg-[#bfbfbf] after:absolute after:w-[1px] after:h-[32px] after:left-[-25px] after:top-[50%] after:-translate-[50%] before:content-[""] before:bg-[#bfbfbf] before:absolute before:w-[1px] before:h-[32px] before:right-[-25px] before:top-[50%] before:-translate-[50%]'>
-            <select className='w-[112px] hidden' name="country"
+            <select className='w-[150px] hidden' name="country"
             value={selectedCountry?.value || ""}
             onChange={(e)=>{
               const country = countries.find((c) => c.value === e.target.value)
@@ -44,14 +45,14 @@ const TopRightBar = () => {
             }}
             >
                {countries.map((country, index)=>(
-                   <option value={country.value}>{country.name}</option>
+                   <option value={country.name}>{country.name}</option>
 
                ))}
             </select>
 
                {/* custom DropDown */}
                <div
-                className=' w-[150px] border  p-2 cursor-pointer flex items-center'
+                className=' w-[175px] p-2 cursor-pointer flex items-center'
                 onClick={()=> setIsOpen(!isOpen)}
                 >
                 {
@@ -59,10 +60,11 @@ const TopRightBar = () => {
                     ?
                     <>
                      <img src={selectedCountry?.flag} alt={selectedCountry?.name} className='w-5 h-4 mr-2'/>
-                     <span>{selectedCountry?.name}</span>
+                     <span className='mr-5'>{selectedCountry?.name}</span>
+                     <FaAngleDown />
                     </>
                     :
-                    <span>Select a Country</span>
+                    <span className='gap-3 flex items-center'>Select a Country <FaAngleDown /></span>
                 }
                
 
@@ -79,7 +81,7 @@ const TopRightBar = () => {
                              onClick={()=> handleSelect(country)}
                              >
                                 <img src={country?.flag} alt={country?.name} className='w-5 h-4 mr-2'/>
-                                {country.name}
+                                {country.value}
                             </li>
                         ))}
                     </ul>
