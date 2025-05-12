@@ -5,6 +5,7 @@ import ProductDetails from "./pages/ProductDetails";
 import CheckoutPage from "./pages/CheckoutPage";
 import BlogPage from "./pages/BlogPage";
 import ContactPage from "./pages/ContactPage";
+import CommonLayout from "./components/commonlayout/CommonLayout";
 
 function App() {
   
@@ -12,12 +13,14 @@ function App() {
   return (
     <>
      <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/product-List" element={<ProductList />} />
-      <Route path="/product-details" element={<ProductDetails />} />
-      <Route path="/checkout-page" element={<CheckoutPage />} />
-      <Route path="/blog-page" element={<BlogPage />} />
-      <Route path="/contact-page" element={<ContactPage />} />
+      <Route path="/" element={<CommonLayout />} >
+        <Route path="/" element={<HomePage />} />
+        <Route path="/product-List" element={<ProductList />} />
+        <Route path="/product-details" element={<ProductDetails />} />
+        <Route path="/checkout-page" element={<CheckoutPage />} />
+        <Route path="/blog-page" element={<BlogPage />} />
+        <Route path="/contact-page" element={<ContactPage />} />
+      </Route>
     </Routes>
     </>
   )
