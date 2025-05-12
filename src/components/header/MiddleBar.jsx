@@ -1,6 +1,7 @@
 import React from 'react'
 import Container from '../commonlayout/Container'
 import { IoMdSearch } from "react-icons/io";
+import CartIcon from '../../icons/cartIcon';
 
 const MiddleBar = () => {
   return (
@@ -22,9 +23,9 @@ const MiddleBar = () => {
             <IoMdSearch className='text-3xl absolute top-1/2 right-6 -translate-y-1/2' />
           </div>
 
-          
+
           <div>
-            
+            <CartIcon />
           </div>
           <div>account</div>
         </div>
