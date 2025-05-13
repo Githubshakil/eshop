@@ -50,12 +50,14 @@ const TopRightBar = () => {
         setSelectedCountry(country);
         setIsOpen(false);
     }
+   
 
 
   return (
-    <div className='flex justify-end items-center gap-[49px]'>
+    <div className='flex justify-end items-center gap-[49px] '>
         <div>
-            <select
+            <select 
+            className='cursor-pointer'
             name="currency"
             value={selectedCurrency}
             onChange={(e)=>{
@@ -73,6 +75,9 @@ const TopRightBar = () => {
             }
             </select>
         </div>
+
+
+        
 
 
 
