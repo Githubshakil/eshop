@@ -22,6 +22,7 @@ const FooterBottom = () => {
                     <Link to="mailto: information@eshop.com " >
                     <BsTelephone className=' absolute top-[20%] -left-8 ' />
                     +1 (555) 123-4567
+                    </Link>
                 </li>
                 <li className='relative left-8 mt-3'>
                   <Link to="https://maps.app.goo.gl/gZ7SG15p6xTnDNrT8" target='_blank' className='flex items-center gap-2'>
