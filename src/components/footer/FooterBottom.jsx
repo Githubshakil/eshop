@@ -15,7 +15,7 @@ const FooterBottom = () => {
               <ul className='relative ' >
                 <li className='  mt-[158px]'>
                   <BsTelephone  />
-                  <div className=' absolute left-[24px] bottom-[54px] flex font-["Montserrat"] text-base text-[#303030] font-normal leading-6 '>
+                  <div className=' absolute left-[24px] bottom-[54px] -mr-[200px] flex font-["Montserrat"] text-base text-[#303030] font-normal leading-6 '>
                     <Link to="tel: +1 (555) 123-4567"  >
                     +1 (555) 123-4567
                   </Link>
