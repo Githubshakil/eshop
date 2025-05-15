@@ -95,7 +95,9 @@ const TopRightBar = () => {
 
 
 
-        <div className='relative after:content-[""] after:bg-[#bfbfbf] after:absolute after:w-[1px] after:h-[32px] after:left-[-25px] after:top-[50%] after:-translate-[50%] before:content-[""] before:bg-[#bfbfbf] before:absolute before:w-[1px] before:h-[32px] before:right-[-25px] before:top-[50%] before:-translate-[50%]'>
+        <div className='relative after:content-[""] after:bg-[#bfbfbf] after:absolute after:w-[1px] after:h-[32px] after:left-[-25px] after:top-[50%] after:-translate-[50%] before:content-[""] before:bg-[#bfbfbf] before:absolute before:w-[1px] before:h-[32px] before:right-[-25px] before:top-[50%] before:-translate-[50%]'
+         ref={countryDropdownRef}
+        >
             <select className='w-[150px] hidden' name="country"
             value={selectedCountry?.value || ""}
             onChange={(e)=>{
@@ -111,7 +113,7 @@ const TopRightBar = () => {
 
                {/* custom DropDown */}
                <div
-               ref={countryDropdownRef}
+            
                 className=' w-[175px] p-2 cursor-pointer flex items-center'
                 onClick={()=> setIsOpen(!isOpen)}
                 >
