@@ -10,7 +10,19 @@ const BottomBar = () => {
 
       const dropdownRef = useRef(null)
 
-      useEffect(() => {},[])
+      useEffect(() => {
+
+        const handleClickOutSide = (event) => {
+          console.log(dropdownRef.current);
+
+          if(dropdownRef.current && !dropdownRef.current.contains(event.target)){
+            setDropdownOpen(false)
+          }
+          
+        }
+
+        document.addEventListener('mousedown', handleClickOutSide)
+      },[])
 
 
       const handleDropdown = ()=>{
@@ -34,10 +46,10 @@ const BottomBar = () => {
               <li className=" relative" ref={dropdownRef}>
                 <button onClick={handleDropdown} className="flex items-center gap-4 cursor-pointer">
                   Products
-                  <FaAngleDown className="cursor-pointer" onClick={handleDropdown} />
+                  <FaAngleDown className="cursor-pointer" onClick={handleDropdown}  />
                 </button>
                 {isDropdownOpen && (
-                  <div className=" absolute z-10 mt-2 w-48 bg-white rounded shadow-lg">
+                  <div className=" absolute z-10 mt-2 w-38 bg-white rounded shadow-lg">
                       <ul className="py-2 font-['Montserrat'] font-normal text-base leading-6 text-black">
                         <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer duration-300">product 1</li>
                         <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer duration-300">product 2</li>
