@@ -56,14 +56,14 @@ const FacilitySection = () => {
                     
                 </div>
         </div>
+    </Container>
+            )
+          }
                 
                 
                 
             
 
         
-    </Container>
-  )
-}
 
 export default FacilitySection
