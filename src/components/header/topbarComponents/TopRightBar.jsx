@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { FaAngleDown } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa6";
@@ -10,6 +10,19 @@ const TopRightBar = () => {
     const [selectedCountry, setSelectedCountry] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
     const [selectedCurrency, setSelectedCurrency] = useState("USD");
+
+
+    const countryDropdownRef = useRef(null)
+
+    useEffect(()=>{
+        const handleClickOutSide = (event) => {
+            if(countryDropdownRef.current && !countryDropdownRef.current.contains(event.target)){
+                setIsOpen(false)
+            }
+        }
+
+        document.addEventListener('mousedown', handleClickOutSide)
+    },[])
 
     const countries = [
         { name: "United State", value: "us" , flag: "https://flagcdn.com/16x12/us.png" },
@@ -98,6 +111,7 @@ const TopRightBar = () => {
 
                {/* custom DropDown */}
                <div
+               ref={countryDropdownRef}
                 className=' w-[175px] p-2 cursor-pointer flex items-center'
                 onClick={()=> setIsOpen(!isOpen)}
                 >
