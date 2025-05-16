@@ -6,7 +6,7 @@ const FeatureProduct = () => {
   return (
     <Container>
             
-        <div className='flex gap-1'>
+        <div className='flex gap-1 mb-[80px]'>
             <ProductLayout /> 
             <ProductLayout /> 
             <ProductLayout /> 
