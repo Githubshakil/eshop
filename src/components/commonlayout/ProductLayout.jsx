@@ -6,7 +6,7 @@ import { IoShareSocialOutline } from "react-icons/io5";
 
 const ProductLayout = () => {
   return (
-    <div className=' border border-transparent p-6 hover:border-[rgba(48,48,48,0.25)] duration-300  rounded-lg group bg-amber-950'>
+    <div className=' border border-transparent p-6 hover:border-[rgba(48,48,48,0.25)] duration-300  rounded-lg group'>
         <div className=' relative'>
             <img src="images/productimg.png" alt="productimg" />
            <div className='flex justify-center gap-[18px] absolute bottom-[6px] left-[26px]'>
