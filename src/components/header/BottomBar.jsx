@@ -3,6 +3,7 @@ import Container from "../commonlayout/Container";
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa6";
 import { FaAngleDown } from "react-icons/fa6";
+import { ImMenu3 } from "react-icons/im";
 
 const BottomBar = () => {
 
@@ -23,10 +24,10 @@ const BottomBar = () => {
           if(categoryRef.current && !categoryRef.current.contains(event.target)){
             setCategoryOpen(false)
           }
-          
-          
-          
         }
+          
+          
+          
 
         document.addEventListener('mousedown', handleClickOutSide)
         return () => {
@@ -35,12 +36,15 @@ const BottomBar = () => {
       },[])
 
 
+
       const handleDropdown = ()=>{
         setDropdownOpen (!isDropdownOpen);
       }
-      const handlecategoryOpen = () =>{
+      const handleCategoryOpen = () =>{
         setCategoryOpen (!isCategoryOpen)
       }
+
+     
      
 
   return (
@@ -50,8 +54,8 @@ const BottomBar = () => {
           <div>
             <ul className='flex items-center gap-[80px] text-white font-["Montserrat"] font-bold text-base leading-6'>
               <li className=" relative" ref={categoryRef}>
-                <button onClick={handlecategoryOpen}  className="flex items-center gap-4 cursor-pointer">
-                  <FaBars className="cursor-pointer"  /> All Categories
+                <button onClick={handleCategoryOpen}  className="flex items-center gap-4 cursor-pointer">
+                  <FaBars onClick={handleCategoryOpen} className={`cursor-pointer ${isCategoryOpen && "rotate-90"}`}  /> All Categories
                 </button>
                 {isCategoryOpen && (
                   <div className=" absolute z-10 mt-2 w-38 bg-white rounded shadow-lg">
@@ -71,7 +75,7 @@ const BottomBar = () => {
               <li className=" relative" ref={dropdownRef}>
                 <button onClick={handleDropdown} className="flex items-center gap-4 cursor-pointer">
                   Products
-                  <FaAngleDown className="cursor-pointer" onClick={handleDropdown}  />
+                  <FaAngleDown  onClick={handleDropdown} className={`cursor-pointer ${isDropdownOpen && "rotate-180"}`}  />
                 </button>
                 {isDropdownOpen && (
                   <div className=" absolute z-10 mt-2 w-38 bg-white rounded shadow-lg">

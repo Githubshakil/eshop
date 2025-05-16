@@ -14,7 +14,7 @@ const FooterBottom = () => {
   return (
     <div className='mt-[100px]  pb-[100px]'>
       <Container>
-        <div className='flex'>
+        <div className='flex border-b border-solid border-[rgba(48,48,48,0.25)]  '>
           <div className='mb-[80px]' >
               <img src="images/logo.png" alt="logo" />
               <ul className='relative ' >
@@ -109,7 +109,7 @@ const FooterBottom = () => {
 
           </div>
         </div>
-        <div className='border-b border-[rgba(48,48,48,0.25)]  border-solid'></div>
+        <div className=''></div>
 
         <div className='flex justify-between'>
           <div>
