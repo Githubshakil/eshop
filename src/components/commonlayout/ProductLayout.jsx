@@ -28,7 +28,7 @@ const ProductLayout = ({percentTag, percentValue, category, title, rating, total
         </div>
         <div>
             <p className='font-["Montserrat"] font-normal text-sm leading-5 uppercase  tracking-[5px] mt-[46px] mb-4 text-[#303030]'>{category}</p>
-            <h3 className='font-["Poppins"] font-semibold text-[20px] leading-[30px] group-hover:text-[#ff624c]  group-hover:underline duration-300 cursor-pointer'>{title}</h3>
+            <h3 className='font-["Poppins"] font-semibold text-[18px] leading-[30px] group-hover:text-[#ff624c]  group-hover:underline duration-300 cursor-pointer'>{title}</h3>
             <div className='flex items-center gap-2 text-[#fed550] mt-1 mb-6'>
                 {ratingValue.map((item, index) => (
                     <IoStar key={index} />
