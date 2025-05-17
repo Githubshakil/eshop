@@ -4,14 +4,14 @@ import { BsCart3 } from "react-icons/bs";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { IoShareSocialOutline } from "react-icons/io5";
 
-const ProductLayout = ({percentTag, percentValue, category, title, rating, totalRating}) => { 
+const ProductLayout = ({percentTag, percentValue, category, title, rating, totalRating, price, border, bg, stock, stockAmount}) => { 
     let [ratingValue, setratingValue] = useState(new Array(+rating).fill(rating))
   return (
-    <div className=' border border-transparent p-6 hover:border-[rgba(48,48,48,0.25)] duration-300  rounded-lg group '>
+    <div style={{background:bg}} className=' border border-transparent p-6 hover:border-[rgba(48,48,48,0.25)] duration-300  rounded-lg group '>
         <div className=' relative'>
-            <img src="images/productimg.png" alt="productimg" />
+            <img className='w-full' src="images/productimg.png" alt="productimg" />
             {percentTag &&
-            <div className='bg-[#ff624c] py-[7px] px-[20px] absolute -top-2  right-[6px] rounded-md font-["Montserrat"] font-bold text-base text-white'>{percentValue}</div>
+            <div className='bg-[#ff624c] py-[7px] px-[20px] absolute -top-2  right-[-9px] rounded-md font-["Montserrat"] font-bold text-base text-white'>{percentValue}</div>
             }
            <div className='flex justify-center gap-[18px] absolute bottom-[6px] left-[30px] scale-0 group-hover:scale-100 duration-300'>
             <div className='h-[50px] w-[50px] rounded-full bg-white border border-[#ff624c] flex items-center justify-center text-[25px] text-[#ff624c] hover:bg-[#ff624c] hover:text-white duration-300 cursor-pointer'>
@@ -36,7 +36,16 @@ const ProductLayout = ({percentTag, percentValue, category, title, rating, total
                
                 <span className='font-["Montserrat"] font-normal text-base text-[#303030]'>{totalRating}</span>
             </div>
-            <p className='font-["Poppins"] font-semibold text-[24px]'>$1,199.00</p>
+            <p className='font-["Poppins"] font-semibold text-[24px]'>${price}</p>
+
+            {stock &&
+            <div className='w-full h-[30px] bg-[rgba(48,48,48,0.25)] rounded-[25px] relative'>
+                    <div className='w-1/2 h-[30px] bg-[rgb(48,48,48)] rounded-[25px] text-center text-white font-["Montserrat"] text-base font-bold leading-6'>
+                    </div>
+                    <p className=' absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-center text-white font-["Montserrat"] text-base font-bold leading-6'>{stockAmount} AVAILABLE</p>
+                        
+            </div>
+            }
 
         </div>
     </div>
