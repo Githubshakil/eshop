@@ -32,6 +32,7 @@ const BottomBar = () => {
         document.addEventListener('mousedown', handleClickOutSide)
         return () => {
           document.removeEventListener('mousedown', handleClickOutSide)
+          
         }
       },[])
 
@@ -60,13 +61,13 @@ const BottomBar = () => {
                 {isCategoryOpen && (
                   <div className=" absolute z-10 mt-2 w-45 bg-white rounded shadow-lg">
                       <ul className="py-2 font-['Montserrat'] font-normal text-[14px] leading-6 text-black">
-                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer hover:text-[#ff624c] duration-300  ">Computers & Tablets</li>    
-                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer hover:text-[#ff624c] duration-300 ">Mobile Phones & Accessories</li>
-                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer hover:text-[#ff624c] duration-300 ">TV & Home Theater</li>
-                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer hover:text-[#ff624c] duration-300 ">Audio & Headphones</li>
-                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer hover:text-[#ff624c] duration-300 ">Cameras & Camcorders</li>
-                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer hover:text-[#ff624c] duration-300 ">Gaming Equipment</li>
-                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer hover:text-[#ff624c] duration-300 "> Home Appliances</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer hover:text-[#ff624c] duration-300" onClick={() => setCategoryOpen(false)}>Computers & Tablets</li>    
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer hover:text-[#ff624c] duration-300" onClick={() => setCategoryOpen(false)}>Mobile Phones & Accessories</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer hover:text-[#ff624c] duration-300" onClick={() => setCategoryOpen(false)}>TV & Home Theater</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer hover:text-[#ff624c] duration-300" onClick={() => setCategoryOpen(false)}>Audio & Headphones</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer hover:text-[#ff624c] duration-300" onClick={() => setCategoryOpen(false)}>Cameras & Camcorders</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer hover:text-[#ff624c] duration-300" onClick={() => setCategoryOpen(false)}>Gaming Equipment</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer hover:text-[#ff624c] duration-300" onClick={() => setCategoryOpen(false)}> Home Appliances</li>
                       </ul>
                   </div>
                 )}
@@ -80,21 +81,21 @@ const BottomBar = () => {
                 {isDropdownOpen && (
                   <div className=" absolute z-10 mt-2 w-45 bg-white rounded shadow-lg">
                       <ul className="py-2 font-['Montserrat'] font-normal text-[14px] leading-6 text-black">
-                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300">Wireless Mouse</li>
-                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300">Bluetooth Headphones</li>
-                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300">Smart Watch</li>
-                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300">Gaming Keyboard</li>
-                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300">4K Monitor</li>
-                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300">Portable SSD</li>
-                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300">Action Camera</li>
-                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300">VR Headset</li>
-                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300">Drone</li>
-                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300">Smart Home Speaker</li>
-                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300">Fitness Tracker</li>
-                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300">Wireless Charger</li>
-                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300">Smart Light Bulb</li>
-                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300">Laptop Stand</li>
-                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300">Noise Cancelling Earbuds</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300" onClick={() => setDropdownOpen(false)}>Wireless Mouse</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300" onClick={() => setDropdownOpen(false)}>Bluetooth Headphones</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300" onClick={() => setDropdownOpen(false)}>Smart Watch</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300" onClick={() => setDropdownOpen(false)}>Gaming Keyboard</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300" onClick={() => setDropdownOpen(false)}>4K Monitor</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300" onClick={() => setDropdownOpen(false)}>Portable SSD</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300" onClick={() => setDropdownOpen(false)}>Action Camera</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300" onClick={() => setDropdownOpen(false)}>VR Headset</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300" onClick={() => setDropdownOpen(false)}>Drone</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300" onClick={() => setDropdownOpen(false)}>Smart Home Speaker</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300" onClick={() => setDropdownOpen(false)}>Fitness Tracker</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300" onClick={() => setDropdownOpen(false)}>Wireless Charger</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300" onClick={() => setDropdownOpen(false)}>Smart Light Bulb</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300" onClick={() => setDropdownOpen(false)}>Laptop Stand</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300" onClick={() => setDropdownOpen(false)}>Noise Cancelling Earbuds</li>
                       </ul>
                   </div>
                 )}
