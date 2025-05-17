@@ -4,14 +4,14 @@ import { BsCart3 } from "react-icons/bs";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { IoShareSocialOutline } from "react-icons/io5";
 
-const ProductLayout = ({percentTag, category, title, rating}) => { 
+const ProductLayout = ({percentTag, percentValue, category, title, rating, totalRating}) => { 
     let [ratingValue, setratingValue] = useState(new Array(+rating).fill(rating))
   return (
     <div className=' border border-transparent p-6 hover:border-[rgba(48,48,48,0.25)] duration-300  rounded-lg group '>
         <div className=' relative'>
             <img src="images/productimg.png" alt="productimg" />
             {percentTag &&
-            <div className='bg-[#ff624c] py-[7px] px-[20px] absolute -top-2  right-[6px] rounded-md font-["Montserrat"] font-bold text-base text-white'>50%</div>
+            <div className='bg-[#ff624c] py-[7px] px-[20px] absolute -top-2  right-[6px] rounded-md font-["Montserrat"] font-bold text-base text-white'>{percentValue}</div>
             }
            <div className='flex justify-center gap-[18px] absolute bottom-[6px] left-[30px] scale-0 group-hover:scale-100 duration-300'>
             <div className='h-[50px] w-[50px] rounded-full bg-white border border-[#ff624c] flex items-center justify-center text-[25px] text-[#ff624c] hover:bg-[#ff624c] hover:text-white duration-300 cursor-pointer'>
@@ -33,12 +33,8 @@ const ProductLayout = ({percentTag, category, title, rating}) => {
                 {ratingValue.map((item, index) => (
                     <IoStar key={index} />
                 ))}
-                <IoStar />
-                <IoStar />
-                <IoStar />
-                <IoStar />
-                <IoStar />
-                <span className='font-["Montserrat"] font-normal text-base text-[#303030]'>( 100 )</span>
+               
+                <span className='font-["Montserrat"] font-normal text-base text-[#303030]'>{totalRating}</span>
             </div>
             <p className='font-["Poppins"] font-semibold text-[24px]'>$1,199.00</p>
 
