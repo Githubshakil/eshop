@@ -58,19 +58,19 @@ const BottomBar = () => {
                   <FaBars onClick={handleCategoryOpen} className={`cursor-pointer ${isCategoryOpen && "rotate-90"}`}  /> All Categories
                 </button>
                 {isCategoryOpen && (
-                  <div className=" absolute z-10 mt-2 w-38 bg-white rounded shadow-lg">
-                      <ul className="py-2 font-['Montserrat'] font-normal text-base leading-6 text-black">
-                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer duration-300">product 1</li>
-                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer duration-300">product 2</li>
-                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer duration-300">product 3</li>
-                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer duration-300">product 4</li>
+                  <div className=" absolute z-10 mt-2 w-45 bg-white rounded shadow-lg">
+                      <ul className="py-2 font-['Montserrat'] font-normal text-[14px] leading-6 text-black">
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer hover:text-[#ff624c] duration-300  ">Computers & Tablets</li>    
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer hover:text-[#ff624c] duration-300 ">Mobile Phones & Accessories</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer hover:text-[#ff624c] duration-300 ">TV & Home Theater</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer hover:text-[#ff624c] duration-300 ">Audio & Headphones</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer hover:text-[#ff624c] duration-300 ">Cameras & Camcorders</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer hover:text-[#ff624c] duration-300 ">Gaming Equipment</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer hover:text-[#ff624c] duration-300 "> Home Appliances</li>
                       </ul>
                   </div>
                 )}
-                
               </li>
-
-
 
               <li className=" relative" ref={dropdownRef}>
                 <button onClick={handleDropdown} className="flex items-center gap-4 cursor-pointer">
@@ -78,18 +78,27 @@ const BottomBar = () => {
                   <FaAngleDown  onClick={handleDropdown} className={`cursor-pointer ${isDropdownOpen && "rotate-180"}`}  />
                 </button>
                 {isDropdownOpen && (
-                  <div className=" absolute z-10 mt-2 w-38 bg-white rounded shadow-lg">
-                      <ul className="py-2 font-['Montserrat'] font-normal text-base leading-6 text-black">
-                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer duration-300">product 1</li>
-                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer duration-300">product 2</li>
-                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer duration-300">product 3</li>
-                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer duration-300">product 4</li>
+                  <div className=" absolute z-10 mt-2 w-45 bg-white rounded shadow-lg">
+                      <ul className="py-2 font-['Montserrat'] font-normal text-[14px] leading-6 text-black">
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300">Wireless Mouse</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300">Bluetooth Headphones</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300">Smart Watch</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300">Gaming Keyboard</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300">4K Monitor</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300">Portable SSD</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300">Action Camera</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300">VR Headset</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300">Drone</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300">Smart Home Speaker</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300">Fitness Tracker</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300">Wireless Charger</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300">Smart Light Bulb</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300">Laptop Stand</li>
+                        <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300">Noise Cancelling Earbuds</li>
                       </ul>
                   </div>
                 )}
               </li>
-
-
 
               <li>
                 <Link to={"/blog-page"}>Blog</Link>

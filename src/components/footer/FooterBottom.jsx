@@ -63,12 +63,12 @@ const FooterBottom = () => {
           <div className='ml-[96px]'>
             <h4 className='font-["Poppins"] font-semibold text-xl text-[#303030]'>Supports</h4>
             <ul className='font-["Montserrat"] text-[#303030] text-base font-normal leading-6'>
-              <li className='mt-3'><Link to={"#"}>About Us</Link></li>
-              <li className='mt-3'><Link to={"#"}>Privacy Policy</Link></li>
-              <li className='mt-3'><Link to={"#"}>Return Policy</Link></li>
-              <li className='mt-3'><Link to={"#"}>Help Centre</Link></li>
-              <li className='mt-3'><Link to={"#"}>Store Locations</Link></li>
-              <li className='mt-3'><Link to={"#"}>Careers</Link></li>
+              <li className='mt-3 hover:text-[#ff624c] duration-300'><Link to={"#"}>About Us</Link></li>
+              <li className='mt-3 hover:text-[#ff624c] duration-300'><Link to={"#"}>Privacy Policy</Link></li>
+              <li className='mt-3 hover:text-[#ff624c] duration-300'><Link to={"#"}>Return Policy</Link></li>
+              <li className='mt-3 hover:text-[#ff624c] duration-300'><Link to={"#"}>Help Centre</Link></li>
+              <li className='mt-3 hover:text-[#ff624c] duration-300'><Link to={"#"}>Store Locations</Link></li>
+              <li className='mt-3 hover:text-[#ff624c] duration-300'><Link to={"#"}>Careers</Link></li>
               </ul>
           </div>
 
@@ -76,13 +76,13 @@ const FooterBottom = () => {
           <div className='ml-[96px]'>
             <h4 className='font-["Poppins"] font-semibold text-xl text-[#303030]'>Categories</h4>
             <ul className='font-["Montserrat"] text-[#303030] text-base font-normal leading-6'>
-              <li className='mt-3'><Link to={"#"}>Computers & Tablets</Link></li>
-              <li className='mt-3'><Link to={"#"}>Mobile Phones & Accessories</Link></li>
-              <li className='mt-3'>TV & Home Theater</li>
-              <li className='mt-3'>Audio & Headphones</li>
-              <li className='mt-3'>Cameras & Camcorders</li>
-              <li className='mt-3'>Gaming Equipment</li>
-              <li className='mt-3'>Home Appliances</li>
+              <li className='mt-3 hover:text-[#ff624c] duration-300'><Link to={"#"}>Computers & Tablets</Link></li>
+              <li className='mt-3 hover:text-[#ff624c] duration-300'><Link to={"#"}>Mobile Phones & Accessories</Link></li>
+              <li className='mt-3 hover:text-[#ff624c] duration-300'><Link to={"#"}>TV & Home Theater</Link></li>
+              <li className='mt-3 hover:text-[#ff624c] duration-300'><Link to={"#"}>Audio & Headphones</Link></li>
+              <li className='mt-3 hover:text-[#ff624c] duration-300'><Link to={"#"}>Cameras & Camcorders</Link></li>
+              <li className='mt-3 hover:text-[#ff624c] duration-300'><Link to={"#"}>Gaming Equipment</Link></li>
+              <li className='mt-3 hover:text-[#ff624c] duration-300'><Link to={"#"}>Home Appliances</Link></li>
               </ul>
           </div>
 
@@ -99,9 +99,9 @@ const FooterBottom = () => {
             <div className='mt-[73px]'>
             <h4 className='font-["Poppins"] font-semibold text-xl text-[#303030]'>Follow Us</h4>
             <ul className='font-["Montserrat"] text-[#303030] text-base font-normal leading-6'>
-              <li className='mt-3'>Twitter</li>
-              <li className='mt-3'>Instagram</li>
-              <li className='mt-3'>Facebook</li>
+              <li className='mt-3 hover:text-[#ff624c] duration-300'><Link to={"#"}>Twitter</Link></li>
+              <li className='mt-3 hover:text-[#ff624c] duration-300'><Link to={"#"}>Instagram</Link></li>
+              <li className='mt-3 hover:text-[#ff624c] duration-300'><Link to={"#"}>Facebook</Link></li>
              
               </ul>
           </div>
@@ -117,9 +117,9 @@ const FooterBottom = () => {
           </div>
 
           <div className='flex gap-5 items-center'>
-            <h5 className='font-["Montserrat"] font-normal text-[14px] leading-5 text-[#303030] '>Privacy Policy</h5>
-            <h5 className='font-["Montserrat"] font-normal text-[14px] leading-5 text-[#303030] relative after:content-[""] after:bg-[#bfbfbf] after:absolute after:w-[1px] after:h-[16px] after:left-[-10px] after:top-[55%] after:-translate-[50%] before:content-[""] before:bg-[#bfbfbf] before:absolute before:w-[1px] before:h-[16px] before:right-[-10px] before:top-[55%] before:-translate-[50%]'>Terms & Condition</h5>
-            <h5 className='font-["Montserrat"] font-normal text-[14px] leading-5 text-[#303030]'>Sitemap</h5>
+            <h5 className='font-["Montserrat"] font-normal text-[14px] leading-5 text-[#303030] hover:text-[#ff624c] duration-300 '><Link to={"#"}>Privacy Policy</Link></h5>
+            <h5 className='font-["Montserrat"] font-normal text-[14px] leading-5 text-[#303030] relative after:content-[""] after:bg-[#bfbfbf] after:absolute after:w-[1px] after:h-[16px] after:left-[-10px] after:top-[55%] after:-translate-[50%] before:content-[""] before:bg-[#bfbfbf] before:absolute before:w-[1px] before:h-[16px] before:right-[-10px] before:top-[55%] before:-translate-[50%] hover:text-[#ff624c] duration-300'><Link to={"#"}>Terms & Condition</Link></h5>
+            <h5 className='font-["Montserrat"] font-normal text-[14px] leading-5 text-[#303030] hover:text-[#ff624c] duration-300'><Link to={"#"}>Sitemap</Link></h5>
           </div>
         </div>
 
