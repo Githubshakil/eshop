@@ -24,7 +24,7 @@ function SampleNextArrow(props) {
         width: "40px",
         height: "40px",
         borderRadius: "50%",
-        border: "2px solid #303030",
+        border: "1px solid #303030",
         color: "#e53e3e",
         boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
         cursor: "pointer",
@@ -40,7 +40,7 @@ function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={`${className} flex justify-center items-center `}
+      className={`${className} grid place-items-center`}
       style={{ ...style,
         left:"-50px",
         marginLeft: "10px",
@@ -49,7 +49,7 @@ function SamplePrevArrow(props) {
         width: "40px",
         height: "40px",
         borderRadius: "50%",
-        border: "2px solid #303030",
+        border: "1px solid #303030",
         color: "#e53e3e",
         boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
         cursor: "pointer",
