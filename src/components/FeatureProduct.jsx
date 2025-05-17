@@ -7,11 +7,10 @@ const FeatureProduct = () => {
     <Container>
             
         <div className='flex gap-1 mb-[80px]'>
-            <ProductLayout /> 
-            <ProductLayout /> 
-            <ProductLayout /> 
-            <ProductLayout /> 
-            <ProductLayout /> 
+            <ProductLayout percentTag = {true} category = "LAPTOP" title= "S21 Laptop Ultra HD LED Screen Feature 2023 ..." rating = "3" /> 
+            <ProductLayout percentTag = {false} category = "LAPTOP" title= "S21 Laptop Ultra HD LED Screen Feature 2023 ..." rating = "5"/> 
+            <ProductLayout percentTag = {false} category = "LAPTOP" title= "S21 Laptop Ultra HD LED Screen Feature 2023 ..." rating = "4" /> 
+            
         </div>
     </Container>
   )
