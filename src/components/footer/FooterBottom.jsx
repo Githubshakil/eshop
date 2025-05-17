@@ -51,11 +51,11 @@ const FooterBottom = () => {
           <div className='ml-[387px]'>
             <h4 className='font-["Poppins"] font-semibold text-xl text-[#303030]'>Links</h4>
             <ul className='font-["Montserrat"] text-[#303030] text-base font-normal leading-6'>
-              <li className='mt-3'>Products List</li>
-              <li className='mt-3'>Order Tracking</li>
-              <li className='mt-3'>Products Guide</li>
-              <li className='mt-3'>Shopping Cart</li>
-              <li className='mt-3'>Tech Blog</li>
+              <li className='mt-3 hover:text-[#ff624c] duration-300'><Link to={"#"}>Products List</Link></li>
+              <li className='mt-3 hover:text-[#ff624c] duration-300'><Link to={"#"}>Order Tracking</Link></li>
+              <li className='mt-3 hover:text-[#ff624c] duration-300'><Link to={"#"}>Products Guide</Link></li>
+              <li className='mt-3 hover:text-[#ff624c] duration-300'><Link to={"#"}>Shopping Cart</Link></li>
+              <li className='mt-3 hover:text-[#ff624c] duration-300'><Link to={"#"}>Tech Blog</Link></li>
             </ul>
           </div>
 
@@ -63,12 +63,12 @@ const FooterBottom = () => {
           <div className='ml-[96px]'>
             <h4 className='font-["Poppins"] font-semibold text-xl text-[#303030]'>Supports</h4>
             <ul className='font-["Montserrat"] text-[#303030] text-base font-normal leading-6'>
-              <li className='mt-3'>About Us</li>
-              <li className='mt-3'>Privacy Policy</li>
-              <li className='mt-3'>Return Policy</li>
-              <li className='mt-3'>Help Centre</li>
-              <li className='mt-3'>Store Locations</li>
-              <li className='mt-3'>Careers</li>
+              <li className='mt-3'><Link to={"#"}>About Us</Link></li>
+              <li className='mt-3'><Link to={"#"}>Privacy Policy</Link></li>
+              <li className='mt-3'><Link to={"#"}>Return Policy</Link></li>
+              <li className='mt-3'><Link to={"#"}>Help Centre</Link></li>
+              <li className='mt-3'><Link to={"#"}>Store Locations</Link></li>
+              <li className='mt-3'><Link to={"#"}>Careers</Link></li>
               </ul>
           </div>
 
@@ -76,8 +76,8 @@ const FooterBottom = () => {
           <div className='ml-[96px]'>
             <h4 className='font-["Poppins"] font-semibold text-xl text-[#303030]'>Categories</h4>
             <ul className='font-["Montserrat"] text-[#303030] text-base font-normal leading-6'>
-              <li className='mt-3'>Computers & Tablets</li>
-              <li className='mt-3'>Mobile Phones & Accessories</li>
+              <li className='mt-3'><Link to={"#"}>Computers & Tablets</Link></li>
+              <li className='mt-3'><Link to={"#"}>Mobile Phones & Accessories</Link></li>
               <li className='mt-3'>TV & Home Theater</li>
               <li className='mt-3'>Audio & Headphones</li>
               <li className='mt-3'>Cameras & Camcorders</li>
@@ -117,9 +117,9 @@ const FooterBottom = () => {
           </div>
 
           <div className='flex gap-5 items-center'>
-            <h5>Privacy Policy</h5>
-            <h5 className='relative after:content-[""] after:bg-[#bfbfbf] after:absolute after:w-[1px] after:h-[16px] after:left-[-10px] after:top-[55%] after:-translate-[50%] before:content-[""] before:bg-[#bfbfbf] before:absolute before:w-[1px] before:h-[16px] before:right-[-10px] before:top-[55%] before:-translate-[50%]'>Terms & Condition</h5>
-            <h5>Sitemap</h5>
+            <h5 className='font-["Montserrat"] font-normal text-[14px] leading-5 text-[#303030] '>Privacy Policy</h5>
+            <h5 className='font-["Montserrat"] font-normal text-[14px] leading-5 text-[#303030] relative after:content-[""] after:bg-[#bfbfbf] after:absolute after:w-[1px] after:h-[16px] after:left-[-10px] after:top-[55%] after:-translate-[50%] before:content-[""] before:bg-[#bfbfbf] before:absolute before:w-[1px] before:h-[16px] before:right-[-10px] before:top-[55%] before:-translate-[50%]'>Terms & Condition</h5>
+            <h5 className='font-["Montserrat"] font-normal text-[14px] leading-5 text-[#303030]'>Sitemap</h5>
           </div>
         </div>
 
