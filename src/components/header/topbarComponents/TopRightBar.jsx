@@ -73,19 +73,20 @@ const TopRightBar = () => {
             onChange={(e)=>{
                 const currency = e.target.value;
                 setSelectedCurrency(currency);
-                
-                
             }
-        }
-        >
-
+        }>
             {
                 currency.map((curr, index)=>(
                     <option key={index} value={curr.value}>{curr.name}</option>
                 ))
             }
             </select>
+            
         </div>
+        
+                
+                
+
 
 
         
@@ -134,6 +135,7 @@ const TopRightBar = () => {
                
 
                </div>
+               
 
                {/* option list */}
 
