@@ -85,15 +85,6 @@ const TopRightBar = () => {
         </div>
         
                 
-                
-
-
-
-        
-
-
-
-
         <div className='relative after:content-[""] after:bg-[#bfbfbf] after:absolute after:w-[1px] after:h-[32px] after:left-[-25px] after:top-[50%] after:-translate-[50%] before:content-[""] before:bg-[#bfbfbf] before:absolute before:w-[1px] before:h-[32px] before:right-[-25px] before:top-[50%] before:-translate-[50%]'
          ref={countryDropdownRef}
         >
@@ -109,7 +100,6 @@ const TopRightBar = () => {
                {countries.map((country, index)=>(
                    <option key={index}
                    value={country.name}
-                   language={country.language}
                    >{country.name}</option>
 
                ))}
@@ -132,6 +122,7 @@ const TopRightBar = () => {
                     :
                     <span className='gap-3 flex items-center'>Select a Country <FaAngleDown /></span>
                 }
+                
                
 
                </div>

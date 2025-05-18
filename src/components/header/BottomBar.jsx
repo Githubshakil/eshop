@@ -16,7 +16,7 @@ const BottomBar = () => {
       useEffect(() => {
 
         const handleClickOutSide = (event) => {
-          console.log(dropdownRef.current);
+          // console.log(dropdownRef.current);
 
           if(dropdownRef.current && !dropdownRef.current.contains(event.target)){
             setDropdownOpen(false)
