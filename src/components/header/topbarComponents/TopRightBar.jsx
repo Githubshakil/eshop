@@ -6,7 +6,16 @@ import { FaInstagram } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 const TopRightBar = () => {
-    const [selectedCountry, setSelectedCountry] = useState(null);
+     const countries = [
+        { name: "United State", value: "us", language: "en", flag: "https://flagcdn.com/16x12/us.png" },      
+        { name: "Bangladesh", value: "bd", language: "bn", flag: "https://flagcdn.com/16x12/bd.png" },
+        
+    ];
+
+
+    const [selectedCountry, setSelectedCountry] = useState(countries[0]);
+    console.log(selectedCountry);
+    
     const [isOpen, setIsOpen] = useState(false);
     const [selectedCurrency, setSelectedCurrency] = useState("USD");
     
@@ -23,25 +32,7 @@ const TopRightBar = () => {
         document.addEventListener('mousedown', handleClickOutSide)
     },[])
     
-    const countries = [
-        { name: "United State", value: "us", language: "en", flag: "https://flagcdn.com/16x12/us.png" },
-        { name: "Spain", value: "es", language: "es", flag: "https://flagcdn.com/16x12/es.png" },
-        { name: "France", value: "fr", language: "fr", flag: "https://flagcdn.com/16x12/fr.png" },
-        { name: "Germany", value: "de", language: "de", flag: "https://flagcdn.com/16x12/de.png" },
-        { name: "Italy", value: "it", language: "it", flag: "https://flagcdn.com/16x12/it.png" },
-        { name: "Portugal", value: "pt", language: "pt", flag: "https://flagcdn.com/16x12/pt.png" },
-        { name: "Netherlands", value: "nl", language: "nl", flag: "https://flagcdn.com/16x12/nl.png" },
-        { name: "Sweden", value: "se", language: "sv", flag: "https://flagcdn.com/16x12/se.png" },
-        { name: "Norway", value: "no", language: "no", flag: "https://flagcdn.com/16x12/no.png" },
-        { name: "Denmark", value: "dk", language: "da", flag: "https://flagcdn.com/16x12/dk.png" },
-        { name: "Bangladesh", value: "bd", language: "bn", flag: "https://flagcdn.com/16x12/bd.png" },
-        { name: "India", value: "in", language: "hi", flag: "https://flagcdn.com/16x12/in.png" },
-        { name: "Pakistan", value: "pk", language: "ur", flag: "https://flagcdn.com/16x12/pk.png" },
-        { name: "Nepal", value: "np", language: "ne", flag: "https://flagcdn.com/16x12/np.png" },
-        { name: "Bhutan", value: "bt", language: "dz", flag: "https://flagcdn.com/16x12/bt.png" },
-        { name: "Sri Lanka", value: "lk", language: "si", flag: "https://flagcdn.com/16x12/lk.png" },
-        { name: "Maldives", value: "mv", language: "dv", flag: "https://flagcdn.com/16x12/mv.png" },
-    ];
+   
     
     
     const currency = [
