@@ -4,21 +4,23 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { language } from '../../../redux/slices/langSlice';
 
 const TopRightBar = () => {
      const countries = [
-        { name: "United State", value: "us", language: "en", flag: "https://flagcdn.com/16x12/us.png" },      
-        { name: "Bangladesh", value: "bd", language: "bn", flag: "https://flagcdn.com/16x12/bd.png" },
+        { name: "United State", value: "us", lngu: "en", flag: "https://flagcdn.com/16x12/us.png" },      
+        { name: "Bangladesh", value: "bd", lngu: "bn", flag: "https://flagcdn.com/16x12/bd.png" },
         
     ];
 
 
     const [selectedCountry, setSelectedCountry] = useState(countries[0]);
-    console.log(selectedCountry);
+
     
     const [isOpen, setIsOpen] = useState(false);
     const [selectedCurrency, setSelectedCurrency] = useState("USD");
-    
+    const dispatch = useDispatch()
     
     const countryDropdownRef = useRef(null)
     
@@ -31,6 +33,9 @@ const TopRightBar = () => {
         
         document.addEventListener('mousedown', handleClickOutSide)
     },[])
+    useEffect(()=>{
+        dispatch(language(selectedCountry))
+    },[selectedCountry])
     
    
     

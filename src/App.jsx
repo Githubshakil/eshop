@@ -6,9 +6,13 @@ import CheckoutPage from "./pages/CheckoutPage";
 import BlogPage from "./pages/BlogPage";
 import ContactPage from "./pages/ContactPage";
 import CommonLayout from "./components/commonlayout/CommonLayout";
-import "../src/i18n"
 import { Provider } from 'react-redux'
 import { store } from '../src/redux/store'
+
+
+// language changer
+import '../i18n';
+
 
 function App() {
   
