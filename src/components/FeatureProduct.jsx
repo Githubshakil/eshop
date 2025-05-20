@@ -25,7 +25,7 @@ function SampleNextArrow(props) {
         height: "40px",
         borderRadius: "50%",
         border: "1px solid #303030",
-        color: "#e53e3e",
+        color: "#303030",
         boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
         cursor: "pointer",
       }}
@@ -50,7 +50,7 @@ function SamplePrevArrow(props) {
         height: "40px",
         borderRadius: "50%",
         border: "1px solid #303030",
-        color: "#e53e3e",
+        color: "#303030",
         boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
         cursor: "pointer",
        }}
