@@ -4,8 +4,13 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+<<<<<<< Updated upstream
 import { useDispatch } from 'react-redux';
 import { language } from '../../../redux/slices/langSlice';
+=======
+import i18n from 'i18next';
+
+>>>>>>> Stashed changes
 
 const TopRightBar = () => {
      const countries = [
@@ -32,6 +37,9 @@ const TopRightBar = () => {
         }
         
         document.addEventListener('mousedown', handleClickOutSide)
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutSide)
+        }
     },[])
     useEffect(()=>{
         dispatch(language(selectedCountry))
@@ -55,6 +63,9 @@ const TopRightBar = () => {
     const handleSelect = (country) => {
         setSelectedCountry(country);
         setIsOpen(false);
+        if (country && country.language) {
+            i18n.changeLanguage(country.language);
+        }
     }
     
     
@@ -81,72 +92,59 @@ const TopRightBar = () => {
         </div>
         
                 
-        <div className='relative after:content-[""] after:bg-[#bfbfbf] after:absolute after:w-[1px] after:h-[32px] after:left-[-25px] after:top-[50%] after:-translate-[50%] before:content-[""] before:bg-[#bfbfbf] before:absolute before:w-[1px] before:h-[32px] before:right-[-25px] before:top-[50%] before:-translate-[50%]'
-         ref={countryDropdownRef}
+        <select className='w-[150px] hidden' name="country"
+                    value={selectedCountry?.value || ""}
+                    onChange={(e)=>{
+                      const country = countries.find((c) => c.value === e.target.value)
+                      if (country) {
+                        setSelectedCountry(country);
+                        if (country.language) {
+                          i18n.changeLanguage(country.language);
+                        }
+                      }
+                    }}
         >
-            <select className='w-[150px] hidden' name="country"
-            value={selectedCountry?.value || ""}
-            
-            onChange={(e)=>{
-              const country = countries.find((c) => c.value === e.target.value)
-              
-              setSelectedCountry(country);
-            }}
-            >
-               {countries.map((country, index)=>(
-                   <option key={index}
-                   value={country.name}
-                   >{country.name}</option>
+          {countries.map((country, index)=>(
+            <option key={index}
+              value={country.value}
+            >{country.name}</option>
+          ))}
+        </select>
 
-               ))}
-            </select>
+        {/* custom DropDown */}
+        <div ref={countryDropdownRef} className="relative inline-block">
+          <div
+            className=' w-[175px] p-2 cursor-pointer flex items-center'
+            onClick={()=> setIsOpen(!isOpen)}
+          >
+            {
+              selectedCountry
+              ?
+              <>
+                <img src={selectedCountry?.flag} alt={selectedCountry?.name} className='w-5 h-4 mr-2'/>
+                <span className='mr-5'>{selectedCountry?.name}</span>
+                <FaAngleDown />
+              </>
+              :
+              <span className='gap-3 flex items-center'>Select a Country <FaAngleDown /></span>
+            }
+          </div>
 
-               {/* custom DropDown */}
-               <div
-            
-                className=' w-[175px] p-2 cursor-pointer flex items-center'
-                onClick={()=> setIsOpen(!isOpen)}
+          {/* option list */}
+          {isOpen && (
+            <ul className='absolute w-[150px] border-gray-300 bg-white shadow-lg z-10'>
+              {countries.map((country, index)=>(
+                <li
+                  key={country.value}
+                  className='flex items-center gap-2 p-2 hover:bg-gray-200 cursor-pointer'
+                  onClick={()=> handleSelect(country)}
                 >
-                {
-                    selectedCountry
-                    ?
-                    <>
-                     <img src={selectedCountry?.flag} alt={selectedCountry?.name} className='w-5 h-4 mr-2'/>
-                     <span className='mr-5'>{selectedCountry?.name}</span>
-                     <FaAngleDown />
-                    </>
-                    :
-                    <span className='gap-3 flex items-center'>Select a Country <FaAngleDown /></span>
-                }
-                
-               
-
-               </div>
-               
-
-               {/* option list */}
-
-               {isOpen && (
-                    <ul className='absolute w-[150px] border-gray-300 bg-white shadow-lg z-10'>
-                        {countries.map((country, index)=>(
-                            <li
-                                key={country.value}
-                                
-                             className='flex items-center gap-2 p-2 hover:bg-gray-200 cursor-pointer'
-                             onClick={()=> handleSelect(country)}
-                             >
-                                <img src={country?.flag} alt={country?.name} className='w-5 h-4 mr-2'/>
-                                {country.name}
-                            </li>
-                        ))}
-                    </ul>
-               )
-
-               }
-
-
-
-
+                  <img src={country?.flag} alt={country?.name} className='w-5 h-4 mr-2'/>
+                  {country.name}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
         <div className='flex items-center gap-5 cursor-pointer'>
            <Link to={"#"}><FaFacebookF /></Link>
