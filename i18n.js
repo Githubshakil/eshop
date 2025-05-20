@@ -10,20 +10,17 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-<<<<<<< Updated upstream:i18n.js
-    supportedLng: ["en" , "bn"],
-=======
+  supportedLngs: ["en", "bn"],
+  fallbackLng: 'en',
+  debug: true,
 
-    fallbackLng: 'en',
-    debug: true,
-
-    interpolation: {
-      escapeValue: false,
-    },
-    backend : {
-        loadPath: "/locals/{{lng}}/translation.json"
-    }
-  });
+  interpolation: {
+    escapeValue: false,
+  },
+  backend: {
+    loadPath: "/locals/{{lng}}/translation.json"
+  }
+});
 
 
 export default i18n;

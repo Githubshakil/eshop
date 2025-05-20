@@ -4,13 +4,9 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-<<<<<<< Updated upstream
 import { useDispatch } from 'react-redux';
 import { language } from '../../../redux/slices/langSlice';
-=======
 import i18n from 'i18next';
-
->>>>>>> Stashed changes
 
 const TopRightBar = () => {
      const countries = [
@@ -63,13 +59,11 @@ const TopRightBar = () => {
     const handleSelect = (country) => {
         setSelectedCountry(country);
         setIsOpen(false);
-        if (country && country.language) {
-            i18n.changeLanguage(country.language);
+        if (country && country.lngu) {
+            i18n.changeLanguage(country.lngu);
         }
     }
-    
-    
-    
+
     return (
         <div className='flex justify-end items-center gap-[49px] '>
         <div>
@@ -80,8 +74,8 @@ const TopRightBar = () => {
             onChange={(e)=>{
                 const currency = e.target.value;
                 setSelectedCurrency(currency);
-            }
-        }>
+            }}
+        >
             {
                 currency.map((curr, index)=>(
                     <option key={index} value={curr.value}>{curr.name}</option>
@@ -92,26 +86,26 @@ const TopRightBar = () => {
         </div>
         
                 
-        <select className='w-[150px] hidden' name="country"
-                    value={selectedCountry?.value || ""}
-                    onChange={(e)=>{
-                      const country = countries.find((c) => c.value === e.target.value)
-                      if (country) {
-                        setSelectedCountry(country);
-                        if (country.language) {
-                          i18n.changeLanguage(country.language);
-                        }
-                      }
-                    }}
+        <select
+          className='w-[150px] hidden'
+          name="country"
+          value={selectedCountry?.value || ""}
+          onChange={(e) => {
+            const country = countries.find((c) => c.value === e.target.value);
+            if (country) {
+              setSelectedCountry(country);
+              if (country.lngu) {
+                i18n.changeLanguage(country.lngu);
+              }
+            }
+          }}
         >
-          {countries.map((country, index)=>(
-            <option key={index}
-              value={country.value}
-            >{country.name}</option>
+          {countries.map((country) => (
+            <option key={country.value} value={country.value}>
+              {country.name}
+            </option>
           ))}
         </select>
-
-        {/* custom DropDown */}
         <div ref={countryDropdownRef} className="relative inline-block">
           <div
             className=' w-[175px] p-2 cursor-pointer flex items-center'
