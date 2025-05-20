@@ -13,8 +13,7 @@ i18n
 <<<<<<< Updated upstream:i18n.js
     supportedLng: ["en" , "bn"],
 =======
-    supportedLngs:["en", "bn", "fr"],
->>>>>>> Stashed changes:src/i18n.js
+
     fallbackLng: 'en',
     debug: true,
 
