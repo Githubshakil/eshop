@@ -2,6 +2,7 @@ import React from 'react'
 import Banner from '../components/Banner'
 import FacilitySection from '../components/FacilitySection'
 import FeatureProduct from '../components/FeatureProduct'
+import OfferSection from '../components/OfferSection'
 
 const HomePage = () => {
   return (
@@ -9,6 +10,7 @@ const HomePage = () => {
     <Banner />
     <FacilitySection />
     <FeatureProduct />
+    <OfferSection />
     </>
   )
 }

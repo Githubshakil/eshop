@@ -6,6 +6,8 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
+import SubHeading from './commonlayout/SubHeading';
+import SideButton from './commonlayout/SideButton';
 
 
 
@@ -76,8 +78,12 @@ const FeatureProduct = ({stock=false}) => {
   };
   return (
     <Container>
+            <div className='mt-20 flex items-center justify-between'>
+              <SubHeading subText={'Featured Products'} />
+              <SideButton sidetext={"View All"} />
+            </div>
           
-            <div className='px-14'>
+            <div className='px-14 mt-[76px]'>
               <Slider {...settings}>
             
             
