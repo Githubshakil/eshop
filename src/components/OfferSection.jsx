@@ -5,7 +5,7 @@ const OfferSection = () => {
   return (
     <>
         <Container>
-            <div className='mt-20 flex gap-6'>
+            <div className='my-20 flex gap-6'>
                 {/* Free Shepping Everywere part */}
                 <div className='w-[902px] h-[501px] rounded-[15px] relative'>
                     <img src="images/free_shipping.png" alt="" />

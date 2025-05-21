@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Button = ({text, bg="#ff624c", fontName="Montserrat", fontWeight="bold",size="xl", color="white", paddingY="16", paddingX="40", radius="10"}) => {
+const Button = ({text, bg="#ff624c", fontName="Montserrat", fontWeight="bold",size="xl", color="white", paddingY="16", paddingX="40", radius="10" , border="1px solid "}) => {
   return (
     <button 
       style={{
@@ -11,7 +11,8 @@ const Button = ({text, bg="#ff624c", fontName="Montserrat", fontWeight="bold",si
         color: color,
         padding: `${paddingY}px ${paddingX}px`,
         borderRadius: `${radius}px`,
-        cursor: "pointer"
+        cursor: "pointer",
+        border: "border"
       }}
     >
       {text}
