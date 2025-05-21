@@ -1,6 +1,7 @@
 import React from 'react'
 import Container from '../commonlayout/Container'
-import Button from '../Button'
+import Button from '../commonlayout/Button'
+
 
 const FooterTop = () => {
 return (
