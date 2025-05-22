@@ -4,7 +4,7 @@ import { BsCart3 } from "react-icons/bs";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { IoShareSocialOutline } from "react-icons/io5";
 
-const ProductLayout = ({percentTag, percentValue, category, title, rating, totalRating, price, border, bg, stock, stockAmount,image, delPrice}) => { 
+const ProductLayout = ({percentTag, percentValue, category, title, rating, totalRating, price, border, bg, stock, stockAmount,image, delPrice,text}) => { 
     let [ratingValue, setRatingValue] = useState(new Array(+rating).fill(rating))
   return (
     <div style={{background:bg}} className=' mx-0.5 border border-transparent p-6 hover:border-[rgba(48,48,48,0.25)] duration-300  rounded-lg group '>
@@ -43,8 +43,8 @@ const ProductLayout = ({percentTag, percentValue, category, title, rating, total
                
                 <span className='font-["Montserrat"] font-normal text-base text-[#303030]'>{totalRating}</span>
             </div>
-           <div className='flex'>
-             <p className='font-["Poppins"] font-semibold text-[24px]'>${price}</p>
+           <div className='flex items-center'>
+             <p className='font-["Poppins"] font-semibold text-[24px] '>${price}</p>
              {delPrice &&
                 <del>{delPrice}</del>
              }
