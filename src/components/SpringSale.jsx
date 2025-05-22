@@ -45,7 +45,7 @@ const SpringSale = () => {
                     </div>
                 {/* right side */}
                     <div className='flex items-center'>
-                         <ProductLayout image={false} blankimg={false} percentValue="40%" percentTag = {false} category = "CAMERA" title= "Mini Polaroid Camerafor Girls with Flash Li..." rating = "3" totalRating="(60)" price="79.00" border={true} bg="transparent" stock={stock} stockAmount ="50" /> 
+                         <ProductLayout image={false} blankimg={false} percentValue="40%" percentTag = {false} category = "CAMERA" title= "Mini Polaroid Camerafor Girls with Flash Li..." rating = "3" totalRating="(60)" price="79.00" border={true} bg="transparent" stock={stock} stockAmount ="70" /> 
                         <ProductLayout image={false} blankimg={false} percentValue="50%" percentTag = {true} category = "TELEVISION" title= "AG OLED65CXPUA 4K Smart OLED TV New ..." rating = "5" totalRating="(200)" price="2,799.00" border={true} bg="transparent" stock={stock} stockAmount ="50"/> 
 
 

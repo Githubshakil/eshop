@@ -87,7 +87,7 @@ const FeatureProduct = ({stock=false}) => {
               <Slider {...settings}>
             
             
-            <ProductLayout image={true} blankimg={false} percentValue="40%" percentTag = {true} category = "PHONE" title= "JPhone 13 High Quality Value Buy Best Cam..." rating = "3" totalRating="(100)" price="999.00" border={true} bg="transparent" stock={stock} stockAmount ="50" /> 
+            <ProductLayout image={true} blankimg={false} percentValue="40%" percentTag = {true} category = "PHONE" title= "JPhone 13 High Quality Value Buy Best Cam..." rating = "3" totalRating="(100)" price="999.00" delPrice={222} border={true} bg="transparent" stock={stock} stockAmount ="50" /> 
             <ProductLayout image={true} blankimg={false} percentValue="40%" percentTag = {false} category = "AUDIO" title= "WH-1000XM4 Wireless Headphones High Qu..." rating = "2" totalRating="(10)" price="59.00" border={true} bg="transparent" stock={stock} stockAmount ="50"/> 
             <ProductLayout image={true} blankimg={false} percentValue="40%" percentTag = {false} category = "LAPTOP" title= "S21 Laptop Ultra HD LED Screen Feature 2023 ..." rating = "3" totalRating="(60)" price="1,199.00" border={true} bg="transparent" stock={stock} stockAmount ="50" /> 
             <ProductLayout image={true} blankimg={false} percentValue="40%" percentTag = {false} category = "CAMERA" title= "Mini Polaroid Camerafor Girls with Flash Li..." rating = "3" totalRating="(60)" price="79.00" border={true} bg="transparent" stock={stock} stockAmount ="50" /> 
