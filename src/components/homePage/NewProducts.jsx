@@ -1,9 +1,9 @@
 import React from 'react'
-import Container from './commonlayout/Container'
-import SubHeading from './commonlayout/SubHeading'
+import Container from '../commonlayout/Container'
+import SubHeading from '../commonlayout/SubHeading'
 import { IoIosArrowDown } from 'react-icons/io'
-import ProductLayout from './commonlayout/ProductLayout'
-import Button from './commonlayout/Button'
+import ProductLayout from '../commonlayout/ProductLayout'
+import Button from '../commonlayout/Button'
 
 
 const NewProducts = () => {

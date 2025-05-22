@@ -1,10 +1,10 @@
 import React from 'react'
-import Banner from '../components/Banner'
-import FacilitySection from '../components/FacilitySection'
-import FeatureProduct from '../components/FeatureProduct'
-import OfferSection from '../components/OfferSection'
-import NewProducts from '../components/NewProducts'
-import SpringSale from '../components/SpringSale'
+import Banner from '../components/homePage/Banner'
+import FacilitySection from '../components/homePage/FacilitySection'
+import FeatureProduct from '../components/homePage/FeatureProduct'
+import OfferSection from '../components/homePage/OfferSection'
+import NewProducts from '../components/homePage/NewProducts'
+import SpringSale from '../components/homePage/SpringSale'
 
 const HomePage = () => {
   return (

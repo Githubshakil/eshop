@@ -1,5 +1,5 @@
 import React from 'react'
-import Container from './commonlayout/Container'
+import Container from '../commonlayout/Container'
 import { Link } from 'react-router-dom'
 
 const Banner = () => {

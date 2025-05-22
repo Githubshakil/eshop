@@ -1,9 +1,9 @@
 import React from 'react'
-import Container from './commonlayout/Container'
-import Headphone from '../icons/Headphone'
-import Security from '../icons/Security'
-import Delivery from '../icons/Delivery'
-import Transparent from '../icons/Transparent'
+import Container from '../commonlayout/Container'
+import Headphone from '../../icons/Headphone'
+import Security from '../../icons/Security'
+import Delivery from '../../icons/Delivery'
+import Transparent from '../../icons/Transparent'
 
 
 

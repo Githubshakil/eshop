@@ -1,7 +1,7 @@
 import React from 'react'
-import Container from './commonlayout/Container'
-import Button from './commonlayout/Button'
-import ProductLayout from './commonlayout/ProductLayout'
+import Container from '../commonlayout/Container'
+import Button from '../commonlayout/Button'
+import ProductLayout from '../commonlayout/ProductLayout'
 
 const SpringSale = () => {
     const stock = true

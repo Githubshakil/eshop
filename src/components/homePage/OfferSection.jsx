@@ -1,6 +1,6 @@
 import React from 'react'
-import Container from './commonlayout/Container'
-import Button from './commonlayout/Button'
+import Container from '../commonlayout/Container'
+import Button from '../commonlayout/Button'
 const OfferSection = () => {
   return (
     <>

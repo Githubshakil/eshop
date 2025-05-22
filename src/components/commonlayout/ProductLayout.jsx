@@ -43,10 +43,10 @@ const ProductLayout = ({percentTag, percentValue, category, title, rating, total
                
                 <span className='font-["Montserrat"] font-normal text-base text-[#303030]'>{totalRating}</span>
             </div>
-           <div className='flex items-center'>
+           <div className='flex items-center gap-[10px]'>
              <p className='font-["Poppins"] font-semibold text-[24px] '>${price}</p>
              {delPrice &&
-                <del>{delPrice}</del>
+                <del className='font-["Montserrat"] text-base font-normal leading-6 text-[#303030]'>{delPrice}</del>
              }
            </div>
 
