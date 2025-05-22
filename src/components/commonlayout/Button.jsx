@@ -1,8 +1,19 @@
 import React from 'react'
 
-const Button = ({text, bg="#ff624c", fontName="Montserrat", fontWeight="bold",size="xl", color="white", paddingY="16", paddingX="40", radius="10" , border="1px solid "}) => {
+const Button = ({
+  text,
+  bg = "#ff624c",
+  fontName = "Montserrat",
+  fontWeight = "bold",
+  size = "1.25rem",
+  color = "white",
+  paddingY = 16,
+  paddingX = 40,
+  radius = 10,
+  border = "1px solid #ff624c"
+}) => {
   return (
-    <button 
+    <button
       style={{
         backgroundColor: bg,
         fontFamily: fontName,
@@ -12,12 +23,12 @@ const Button = ({text, bg="#ff624c", fontName="Montserrat", fontWeight="bold",si
         padding: `${paddingY}px ${paddingX}px`,
         borderRadius: `${radius}px`,
         cursor: "pointer",
-        border: "border"
+        border: border
       }}
     >
       {text}
     </button>
-  )
-}
+  );
+};
 
 export default Button

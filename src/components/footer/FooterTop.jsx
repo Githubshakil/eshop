@@ -18,7 +18,7 @@ return (
                                 placeholder="Enter your email address ..."
                             />
                             <br />
-                            <Button text="Subscribe" />
+                            <Button text={"Subscribe"} border='true'/>
                     </div>
             </Container>
     </>

@@ -17,7 +17,7 @@ const OfferSection = () => {
                             Special for orders over $500.00 worldwide.
                             Available throughout May & June 2023
                         </p>
-                        <Button text={"Shop Now"} />
+                        <Button text={"Shop Now"} border='true' />
                     </div>
                 </div>
                     {/* Black Friday Clearance */}
@@ -30,7 +30,7 @@ const OfferSection = () => {
                         <p className='mt-5 mb-[64px] max-w-[337px] font-["Poppins"] text-xl text-[#303030] font-normal leading-[30px]'>
                             Up to 80% promo for all products!
                         </p>
-                        <Button text={"Shop Now"} />
+                        <Button text={"Shop Now"} border='true' />
                     </div>
                 </div>
             </div>
