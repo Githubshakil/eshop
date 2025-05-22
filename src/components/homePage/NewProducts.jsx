@@ -33,7 +33,7 @@ const NewProducts = () => {
             <ProductLayout  percentValue="50%" percentTag = {true} category = "CAMERA" title= "CamPro HERO10 Black Sleek Design 2023 4K ..." rating = "5" totalRating="(20)" price="1,499.99" border={true} bg="transparent" stock={false} stockAmount ="50"/> 
             </div>
             <div className='text-center mt-[64px]'>
-              <Button text={"Load More"} border='1px solid' color='#ff624c' bg='transparent'  />
+              <Button text={"Load More"} border='1px solid' color='#ff624c' bg='none'  />
             </div>
         </Container>
     </>
