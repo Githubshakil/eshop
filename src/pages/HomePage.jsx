@@ -4,6 +4,7 @@ import FacilitySection from '../components/FacilitySection'
 import FeatureProduct from '../components/FeatureProduct'
 import OfferSection from '../components/OfferSection'
 import NewProducts from '../components/NewProducts'
+import SpringSale from '../components/SpringSale'
 
 const HomePage = () => {
   return (
@@ -13,6 +14,7 @@ const HomePage = () => {
     <FeatureProduct />
     <OfferSection />
     <NewProducts />
+    <SpringSale />
     </>
   )
 }
