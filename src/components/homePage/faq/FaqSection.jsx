@@ -25,7 +25,7 @@ const FaqSection = () => {
     ]
   return (
    <>
-    <div className='mt-[80px] py-[64px] bg-[#f4f4f4]' >
+    <div className='mt-[80px] py-[64px] bg-[#f4f4f4] mb-20' >
         <Container>
             <div className='flex justify-between'>
                 <div className='w-[902px]'>
