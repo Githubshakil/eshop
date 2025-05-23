@@ -10,7 +10,7 @@ const BestSellerSection = () => {
   return (
     <>
     <Container>
-        <div className='flex justify-between gap-[74px]'>
+        <div className='flex justify-between gap-[74px] mt-[80px]'>
             {/* left side */}
             <div>
                 <div className='flex items-center justify-between gap-[601px]'>
