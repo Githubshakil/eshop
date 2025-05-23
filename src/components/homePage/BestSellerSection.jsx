@@ -3,6 +3,7 @@ import SubHeading from '../commonlayout/SubHeading'
 import Container from '../commonlayout/Container'
 import SideButton from '../commonlayout/SideButton'
 import ProductLayout from '../commonlayout/ProductLayout'
+import Button from '../commonlayout/Button'
 
 const BestSellerSection = () => {
     const stock = true;
@@ -26,9 +27,10 @@ const BestSellerSection = () => {
                 </div>
             </div>
             {/* right side */}
-            <div className='max-w-[544px] bg-[#f4f4f4] pt-20 px-[36px]'>
-                <h4 className='max-w-[247px] font-["Poppins] text-[36px] font-semibold leading-[46px] text-[#303030] text-center ml-[122px] '>Buy One, Get One Free!</h4>
-                <p className='max-w-[471px] font-["Montserrat"] text-[20px] font-normal leading-[30px] text-[#303030] text-center '>50% off promo for all headphones & earphones.</p>
+            <div className='max-w-[544px] bg-[#f4f4f4] pt-20 text-center '>
+                <h4 className='w-[247px] font-["Poppins] text-[36px] font-semibold leading-[46px] text-[#303030]  mx-[148px] '>Buy One,Get One Free!</h4>
+                <p className='max-w-[471px] font-["Montserrat"] text-[20px] font-normal leading-[30px] text-[#303030] text-center mx-[36px] mt-5 mb-12'>50% off promo for all headphones & earphones.</p>
+                <Button text={"Shop Now"}/>
             </div>
     </div>
     </Container>
