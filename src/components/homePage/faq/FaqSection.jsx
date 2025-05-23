@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import Container from '../commonlayout/Container'
+import Container from '../../commonlayout/Container'
 import AccordianItem from './AccordianItem'
-import Button from '../commonlayout/Button'
+import Button from '../../commonlayout/Button'
 
 const FaqSection = () => {
     let [openIndex, setOpenIndex]= useState(null)
