@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Container from '../commonlayout/Container'
 import AccordianItem from './AccordianItem'
+import Button from '../commonlayout/Button'
 
 const FaqSection = () => {
     let [openIndex, setOpenIndex]= useState(null)
@@ -24,7 +25,7 @@ const FaqSection = () => {
     ]
   return (
    <>
-    <div className='mt-[80px] py-[64px]' style={{background: "url('images/faqbg.png')" }}>
+    <div className='mt-[80px] py-[64px] bg-[#f4f4f4]' >
         <Container>
             <div className='flex justify-between'>
                 <div className='w-[902px]'>
@@ -39,7 +40,12 @@ const FaqSection = () => {
                         ))}
                 </div>
             <div>
-
+                <img className='ml-[444px]' src="images/faq_dot_box.png" alt="" />
+                <h4 className='max-w-[306px] font-["Poppins"] text-[36px] normal font-semibold leading-[46px] mt-[45px] ml-[60px]'>Frequently Asked Questions</h4>
+                <p className='max-w-[392px] font-["Montserrat"] text-5 normal font-normal leading-[30px] mt-6 ml-[60px]'>Questions that get asked the most by our clients. Get any burning questions?</p>
+               <div className='ml-[60px] mt-[64px]'>
+                 <Button text={"Ask A Question"}/>
+               </div>
             </div>
             </div>
         </Container>
