@@ -5,6 +5,7 @@ import FeatureProduct from '../components/homePage/FeatureProduct'
 import OfferSection from '../components/homePage/OfferSection'
 import NewProducts from '../components/homePage/NewProducts'
 import SpringSale from '../components/homePage/SpringSale'
+import FaqSection from '../components/faq/FaqSection'
 
 const HomePage = () => {
   return (
@@ -15,6 +16,7 @@ const HomePage = () => {
     <OfferSection />
     <NewProducts />
     <SpringSale />
+    <FaqSection />
     </>
   )
 }
