@@ -7,6 +7,7 @@ import NewProducts from '../components/homePage/NewProducts'
 import SpringSale from '../components/homePage/SpringSale'
 import BestSellerSection from '../components/homePage/BestSellerSection'
 import FaqSection from '../components/homePage/faq/FaqSection'
+import TechTalkSection from '../components/homePage/TechTalkSection'
 
 const HomePage = () => {
   return (
@@ -19,6 +20,7 @@ const HomePage = () => {
     <SpringSale />
     <BestSellerSection />
     <FaqSection />
+    <TechTalkSection />
     </>
   )
 }
