@@ -15,7 +15,7 @@ const TechTalkSection = () => {
             <SideButton sidetext={"View All"}/>
         </div>
         <div className='flex items-center gap-12 '>
-            <div className=' border border-transparent  hover:border-[rgba(48,48,48,0.25)]  hover:border- duration-300  rounded-[25px] cursor-pointer'>
+            <div className=' border border-transparent  hover:border-[rgba(48,48,48,0.25)]  hover:border- duration-300  rounded-[25px] cursor-pointer '>
                 <div className='w-[440px] h-[406px] rounded-[25px] bg-[#D9D9D9] mb-[32px] mx-auto duration-300'></div>
                 <h5 className='font-["Poppins"] text-2xl font-semibold leading-[30px] mb-8 w-[439px]'>Our Category Choices for Top 10 Tech Gadgets in 2023</h5>
                 <div className='flex items-center justify-between mb-12 '>
@@ -37,7 +37,7 @@ const TechTalkSection = () => {
                 </div>
             </div>
 
-            <div className=' border border-transparent   hover:border-[rgba(48,48,48,0.25)]  hover:border- duration-300  rounded-[25px] cursor-pointer'>
+            <div className=' border border-transparent hover:border-[rgba(48,48,48,0.25)]  hover:border- duration-300  rounded-[25px] cursor-pointer'>
                 <div className='w-[440px] h-[406px] rounded-[25px] bg-[#D9D9D9] mb-[32px] mx-auto duration-300'></div>
                 <h5 className='font-["Poppins"] text-2xl font-semibold leading-[30px] mb-8 w-[439px]'>Our Category Choices for Top 10 Tech Gadgets in 2023</h5>
                 <div className='flex items-center justify-between mb-12 '>
