@@ -8,6 +8,7 @@ import SpringSale from '../components/homePage/SpringSale'
 import BestSellerSection from '../components/homePage/BestSellerSection'
 import FaqSection from '../components/homePage/faq/FaqSection'
 import TechTalkSection from '../components/homePage/TechTalkSection'
+import OurClints from '../components/homePage/OurClints'
 
 const HomePage = () => {
   return (
@@ -21,6 +22,7 @@ const HomePage = () => {
     <BestSellerSection />
     <FaqSection />
     <TechTalkSection />
+    <OurClints/>
     </>
   )
 }
