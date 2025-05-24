@@ -4,7 +4,7 @@ import { BsCart3 } from "react-icons/bs";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { IoShareSocialOutline } from "react-icons/io5";
 
-const ProductLayout = ({percentTag, percentValue, category, title, rating, totalRating, price, border, bg, stock, stockAmount,image, delPrice,text}) => { 
+const ProductLayout = ({percentTag,percentTagRound, percentValue, category, title, rating, totalRating, price, border, bg, stock, stockAmount,image, delPrice,text}) => { 
     let [ratingValue, setRatingValue] = useState(new Array(+rating).fill(rating))
   return (
     <div style={{background:bg}} className=' mx-0.5 border border-transparent p-6 hover:border-[rgba(48,48,48,0.25)] duration-300  rounded-lg group '>
@@ -19,8 +19,10 @@ const ProductLayout = ({percentTag, percentValue, category, title, rating, total
             }
             {percentTag &&
             <div className='bg-[#ff624c] py-[8px] px-[20px] absolute -top-2  right-[-6px] rounded-md font-["Montserrat"] font-bold text-base text-white'>{percentValue}</div>
-           
             }
+           {percentTagRound&&
+           <div className='bg-[#ff624c] py-[25px] px-[20px] absolute -top-2  right-[-6px] rounded-[50%] font-["Montserrat"] font-bold text-base text-white'>{percentValue}</div>
+           }
            <div className='flex items-center justify-center  gap-[18px] absolute bottom-[6px] left-[30px] scale-0 group-hover:scale-100 duration-300'>
             <div className='h-[50px] w-[50px] rounded-full bg-white border border-[#ff624c] flex items-center justify-center text-[25px] text-[#ff624c] hover:bg-[#ff624c] hover:text-white duration-300 cursor-pointer'>
                 <BsCart3 />
