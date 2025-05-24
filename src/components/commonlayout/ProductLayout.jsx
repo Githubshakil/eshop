@@ -19,6 +19,7 @@ const ProductLayout = ({percentTag, percentValue, category, title, rating, total
             }
             {percentTag &&
             <div className='bg-[#ff624c] py-[8px] px-[20px] absolute -top-2  right-[-6px] rounded-md font-["Montserrat"] font-bold text-base text-white'>{percentValue}</div>
+           
             }
            <div className='flex items-center justify-center  gap-[18px] absolute bottom-[6px] left-[30px] scale-0 group-hover:scale-100 duration-300'>
             <div className='h-[50px] w-[50px] rounded-full bg-white border border-[#ff624c] flex items-center justify-center text-[25px] text-[#ff624c] hover:bg-[#ff624c] hover:text-white duration-300 cursor-pointer'>
