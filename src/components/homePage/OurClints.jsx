@@ -11,11 +11,13 @@ const OurClints = () => {
     var settings = {
     dots: false,
     infinite: true,
-    speed: 2500,
-    slidesToShow: 5,
-    slidesToScroll: 3,
+    slidesToShow: 4,
+    slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 200
+    speed: 2000,
+    autoplaySpeed: 2000,
+    cssEase: "linear"
+    
   };
   return (
     <>
