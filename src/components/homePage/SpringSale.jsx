@@ -1,4 +1,4 @@
-import React from 'react'
+import  { useEffect, useState } from 'react'
 import Container from '../commonlayout/Container'
 import Button from '../commonlayout/Button'
 import ProductLayout from '../commonlayout/ProductLayout'
@@ -37,7 +37,34 @@ function SampleNextArrow(props) {
 const SpringSale = () => {
     // Define a stock value or array as needed
     const stock =100; // Example value, adjust as needed
+    // timer function
+    const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
+    function  calculateTimeLeft(){
+        const saleEndDate = new Date("June 30, 2025 12:00 AM +06").getTime()
+        const now = new Date().getTime()
+        const difference = saleEndDate - now;
+
+        if(difference < 0) {
+            return { Days: 0, hours: 0, minutes: 0, seconds: 0};
+        }
+        return {
+            days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+            hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+            minutes: Math.floor((difference % (1000 * 60 * 60 )) / (1000 * 60 )),
+            seconds: Math.floor((difference % (1000 * 60 ) / 1000))
+        }
+    }
+
+    useEffect(() => {
+        const timer = setInterval(()=>{
+            setTimeLeft(calculateTimeLeft())
+        },1000)
+        return () => clearInterval(timer)
+    },[])
+
+
+    // slider function
     var settings = {
     dots: false,
     infinite: true,
@@ -64,17 +91,22 @@ return (
                         </div>
                         <div className="w-full max-w-[400px] flex justify-between items-baseline">
                             <div className="flex flex-col items-center">
-                                <h6 className='font-["Poppins"] text-[28px] lg:text-[35px] font-semibold leading-[38px] lg:leading-[46px] text-[#FF624C]'>00</h6>
+                                <h6 className='font-["Poppins"] text-[28px] lg:text-[35px] font-semibold leading-[38px] lg:leading-[46px] text-[#FF624C]'>{timeLeft.days}</h6>
                                 <p className='font-["Montserrat"] text-base font-normal leading-6 text-[#303030]'>Days</p>
                             </div>
                             <span className="text-[#FF624C] text-[28px] lg:text-[36px]">:</span>
                             <div className="flex flex-col items-center">
-                                <h6 className='font-["Poppins"] text-[28px] lg:text-[35px] font-semibold leading-[38px] lg:leading-[46px] text-[#FF624C]'>40</h6>
+                                <h6 className='font-["Poppins"] text-[28px] lg:text-[35px] font-semibold leading-[38px] lg:leading-[46px] text-[#FF624C]'>{timeLeft.hours}</h6>
+                                <p className='font-["Montserrat"] text-base font-normal leading-6 text-[#303030]'>Hours</p>
+                            </div>
+                            <span className="text-[#FF624C] text-[28px] lg:text-[36px]">:</span>
+                            <div className="flex flex-col items-center">
+                                <h6 className='font-["Poppins"] text-[28px] lg:text-[35px] font-semibold leading-[38px] lg:leading-[46px] text-[#FF624C]'>{timeLeft.minutes}</h6>
                                 <p className='font-["Montserrat"] text-base font-normal leading-6 text-[#303030]'>Minutes</p>
                             </div>
                             <span className="text-[#FF624C] text-[28px] lg:text-[36px]">:</span>
                             <div className="flex flex-col items-center">
-                                <h6 className='font-["Poppins"] text-[28px] lg:text-[35px] font-semibold leading-[38px] lg:leading-[46px] text-[#FF624C]'>12</h6>
+                                <h6 className='font-["Poppins"] text-[28px] lg:text-[35px] font-semibold leading-[38px] lg:leading-[46px] text-[#FF624C]'>{timeLeft.seconds}</h6>
                                 <p className='font-["Montserrat"] text-base font-normal leading-6 text-[#303030]'>Seconds</p>
                             </div>
                         </div>
