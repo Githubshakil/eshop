@@ -38,30 +38,30 @@ function SampleNextArrow(props) {
   );
 }
 
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={`${className} grid place-items-center`}
-      style={{ ...style,
-        left:"-50px",
-        marginLeft: "10px",
-        display: "flex",
-        background: "#fff",
-        width: "40px",
-        height: "40px",
-        borderRadius: "50%",
-        border: "1px solid #303030",
-        color: "#303030",
-        boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
-        cursor: "pointer",
-       }}
-      onClick={onClick}
-    >
-      <IoIosArrowBack size={14} color='#303030 ' className=' absolute top-[50%] left-[50%] -translate-[50%]' />
-      </div>
-  );
-}
+// function SamplePrevArrow(props) {
+//   const { className, style, onClick } = props;
+//   return (
+//     <div
+//       className={`${className} grid place-items-center`}
+//       style={{ ...style,
+//         left:"-50px",
+//         marginLeft: "10px",
+//         display: "flex",
+//         background: "#fff",
+//         width: "40px",
+//         height: "40px",
+//         borderRadius: "50%",
+//         border: "1px solid #303030",
+//         color: "#303030",
+//         boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+//         cursor: "pointer",
+//        }}
+//       onClick={onClick}
+//     >
+//       <IoIosArrowBack size={14} color='#303030 ' className=' absolute top-[50%] left-[50%] -translate-[50%]' />
+//       </div>
+//   );
+// }
 
 const FeatureProduct = ({stock=false}) => {
   
@@ -72,7 +72,7 @@ const FeatureProduct = ({stock=false}) => {
     slidesToShow: 4,
     slidesToScroll: 2,
     nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    // prevArrow: <SamplePrevArrow />,
     autoplay: true,
     autoplaySpeed: 2500
   };
