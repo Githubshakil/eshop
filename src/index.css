@@ -6,9 +6,3 @@
 .slick-next::before{
     display: none; 
 }
-.slick-next {
-	right: -40px;
-}
-.slick-prev {
-	left: -40px;
-}
