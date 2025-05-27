@@ -47,7 +47,7 @@ const NewProducts = () => {
                 {/* <IoIosArrowDown className= 'w-4 h-4 text-[#303030] cursor-pointer' /> */}
                 
 
-            <div className='flex items-center'>
+            <div className='flex items-center justify-between'>
             <ProductLayout  percentValue="40%" percentTag = {true} category = "WATCH" title= "Orange Watch 12 High Quality Health Sensor..." rating = "3" totalRating="(120)" price="959.99" border={true} bg="transparent" stock={true} stockAmount ="50" /> 
             <ProductLayout  percentValue="40%" percentTag = {false} category = "TABLET" title= "Ultra Tablet Qwerty HD 10765 Series Low Pri..." rating = "2" totalRating="(100)" price="799.00" border={true} bg="transparent" stock={true} stockAmount ="50"/> 
             <ProductLayout  percentValue="40%" percentTag = {false} category = "AUDIO" title= "QuietComfort 45 Wireless Headphone ..." rating = "3" totalRating="(120)" price="329.99" border={true} bg="transparent" stock={true} stockAmount ="50" /> 
