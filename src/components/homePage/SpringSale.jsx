@@ -75,7 +75,7 @@ const SpringSale = () => {
     slidesToShow: 2,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 2500,
    
   };
