@@ -13,8 +13,8 @@ const BestSellerSection = () => {
         <div className='flex justify-between gap-[74px] mt-[80px]'>
             {/* left side */}
             <div>
-                <div className='flex items-center justify-between gap-[601px]'>
-                    <div><SubHeading subText={"Best Seller"}/></div>
+                <div className='flex items-center justify-between gap-[601px] mb-[48px]'>
+                    <div ><SubHeading subText={"Best Seller"} /></div>
                     <div><SideButton sidetext={"View All"} /></div>
                 </div>
                 <div className='grid grid-cols-3 grid-rows-2 gap-6 max-w-[902px]'>
