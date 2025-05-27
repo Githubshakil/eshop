@@ -75,7 +75,8 @@ const FeatureProduct = () => {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     autoplay: true,
-    autoplaySpeed: 2500
+    autoplaySpeed: 2500,
+    
   };
   return (
     <Container>
