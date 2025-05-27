@@ -59,7 +59,7 @@ const BottomBar = () => {
             <ul className='flex items-center gap-[80px] text-white font-["Montserrat"] font-bold text-base leading-6'>
               <li className=" relative" ref={categoryRef}>
                 <button onClick={handleCategoryOpen}  className="flex items-center gap-4 cursor-pointer">
-                  <FaBars className={`cursor-pointer ${isCategoryOpen && "rotate-90"}`}  /> {t("All_Categories")}
+                  <FaBars className="cursor-pointer "  /> {t("All_Categories")}
                 </button>
                 {isCategoryOpen && (
                   <div className=" absolute z-10 mt-2 w-45 bg-white rounded shadow-lg">
