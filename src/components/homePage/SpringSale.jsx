@@ -15,6 +15,7 @@ function SampleNextArrow(props) {
           className={className}
           style={{
             ...style,
+            background:"#ffffff",
             display: "block",
             color: "#303030",
             fontSize: "20px",
