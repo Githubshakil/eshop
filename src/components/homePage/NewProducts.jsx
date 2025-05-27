@@ -35,8 +35,8 @@ const NewProducts = () => {
                 }}
             >
             {
-                cetagories.map((cetagory, index)=>(
-                    <option className='text-[#303030] font-["Poppins]' key={index} value={cetagory.value}>{cetagory.name}</option>
+                cetagories.map((category, index)=>(
+                    <option className='text-[#303030] font-["Poppins] transition-all duration-300 cursor-pointer' key={index} value={category.value}>{category.name}</option>
                 ))
             }
             </select>
