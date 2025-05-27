@@ -95,22 +95,22 @@ return (
                         </div>
                         <div className="w-full max-w-[400px] flex justify-between items-baseline">
                             <div className="flex flex-col items-center">
-                                <h6 className='font-["Poppins"] text-[28px] lg:text-[35px] font-semibold leading-[38px] lg:leading-[46px] text-[#FF624C]'>{timeLeft.days}</h6>
+                                <h6 className='font-["Poppins"] text-[28px] lg:text-[35px] font-semibold leading-[38px] lg:leading-[46px] text-[#FF624C]'>{timeLeft.days <= 9 ? `0${timeLeft.days}` : timeLeft.days}</h6>
                                 <p className='font-["Montserrat"] text-base font-normal leading-6 text-[#303030]'>Days</p>
                             </div>
                             <span className="text-[#FF624C] text-[28px] lg:text-[36px]">:</span>
                             <div className="flex flex-col items-center">
-                                <h6 className='font-["Poppins"] text-[28px] lg:text-[35px] font-semibold leading-[38px] lg:leading-[46px] text-[#FF624C]'>{timeLeft.hours}</h6>
+                                <h6 className='font-["Poppins"] text-[28px] lg:text-[35px] font-semibold leading-[38px] lg:leading-[46px] text-[#FF624C]'>{timeLeft.hours <= 9 ? `0${timeLeft.hours}` : timeLeft.hours}</h6>
                                 <p className='font-["Montserrat"] text-base font-normal leading-6 text-[#303030]'>Hours</p>
                             </div>
                             <span className="text-[#FF624C] text-[28px] lg:text-[36px]">:</span>
                             <div className="flex flex-col items-center">
-                                <h6 className='font-["Poppins"] text-[28px] lg:text-[35px] font-semibold leading-[38px] lg:leading-[46px] text-[#FF624C]'>{timeLeft.minutes}</h6>
+                                <h6 className='font-["Poppins"] text-[28px] lg:text-[35px] font-semibold leading-[38px] lg:leading-[46px] text-[#FF624C]'>{timeLeft.minutes <= 9 ? `0${timeLeft.minutes}` : timeLeft.minutes}</h6>
                                 <p className='font-["Montserrat"] text-base font-normal leading-6 text-[#303030]'>Minutes</p>
                             </div>
                             <span className="text-[#FF624C] text-[28px] lg:text-[36px]">:</span>
                             <div className="flex flex-col items-center">
-                                <h6 className='font-["Poppins"] text-[28px] lg:text-[35px] font-semibold leading-[38px] lg:leading-[46px] text-[#FF624C]'>{timeLeft.seconds}</h6>
+                                <h6 className='font-["Poppins"] text-[28px] lg:text-[35px] font-semibold leading-[38px] lg:leading-[46px] text-[#FF624C]'>{timeLeft.seconds <= 9 ? `0${timeLeft.seconds}` : timeLeft.seconds}</h6>
                                 <p className='font-["Montserrat"] text-base font-normal leading-6 text-[#303030]'>Seconds</p>
                             </div>
                         </div>
