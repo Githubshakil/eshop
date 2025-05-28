@@ -87,7 +87,7 @@ const TopRightBar = () => {
         
                 
         <select
-          className='w-[150px] hidden'
+          className='w-[150px] hidden '
           name="country"
           value={selectedCountry?.value || ""}
           onChange={(e) => {
@@ -106,9 +106,9 @@ const TopRightBar = () => {
             </option>
           ))}
         </select>
-        <div ref={countryDropdownRef} className="relative inline-block">
+        <div ref={countryDropdownRef} className="relative inline-block ">
           <div
-            className=' w-[175px] p-2 cursor-pointer flex items-center'
+            className=' w-[175px] p-2 cursor-pointer flex items-center relative  before:content-[""] before:bg-[rgba(48,48,48,0.25)] before:absolute before:w-[1px] before:h-[32px] before:right-[-15px] before:top-[50%] before:-translate-[50%] after:content-[""] after:bg-[rgba(48,48,48,0.25)] after:absolute after:w-[1px] after:h-[32px] after:left-[-25px] after:top-[50%] after:-translate-[50%]'
             onClick={()=> setIsOpen(!isOpen)}
           >
             {
@@ -141,9 +141,9 @@ const TopRightBar = () => {
           )}
         </div>
         <div className='flex items-center gap-5 cursor-pointer'>
-           <Link to={"#"}><FaFacebookF /></Link>
-           <Link to={"#"}><FaTwitter /></Link>
-           <Link to={"#"}><FaInstagram /></Link> 
+           <Link to={"#"}><FaFacebookF className='text-base text-[#303030] hover:text-[#ff624c] transition-all duration-300' /></Link>
+           <Link to={"#"}><FaTwitter className='text-base text-[#303030] hover:text-[#ff624c] transition-all duration-300'/></Link>
+           <Link to={"#"}><FaInstagram className='text-base text-[#303030] hover:text-[#ff624c] transition-all duration-300'/></Link> 
         </div>
     </div>
   )
