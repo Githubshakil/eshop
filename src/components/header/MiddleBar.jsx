@@ -16,11 +16,11 @@ const MiddleBar = () => {
         <div className="flex items-center">
           <div className="relative flex items-center mr-[48px]">
             <input
-              className="relative w-[332px] border border-[rgba(48,48,48,0.35)] py-[18px] px-6 rounded-[10px] text-sm font-['Montserrat'] leading-6 text-[#303030] placeholder:text-[#303030] focus:outline-none focus:border-[#ff624c] transition-colors duration-200"
+              className="relative w-[332px] border border-[rgba(48,48,48,0.35)] py-[18px] px-6 rounded-[10px] text-sm font-['Montserrat'] leading-6 text-[#303030] placeholder:text-[#303030] focus:outline-none "
               type="text"
               placeholder="Search Products ..."
             />
-            <SearchIcon className=" absolute " />
+            <SearchIcon className=" absolute  " />
           </div>
 
           <div className='flex items-center  relative pl-[50px] before:content-[""] before:bg-[#bfbfbf] before:absolute before:w-[1px] before:h-[32px] before:right-[-40px] before:top-[50%] before:-translate-[50%]'>
