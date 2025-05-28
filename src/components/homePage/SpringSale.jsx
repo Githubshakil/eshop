@@ -124,10 +124,10 @@ return (
                     {/* right side */}
                     <div className="w-full lg:w-1/2 mt-10 lg:mt-0 flex flex-col">
                         <Slider {...settings}>
-                            <ProductLayout image={true} blankimg={false} percentValue="40%" percentTag={false} percentTagRound={false} category="CAMERA" title="Mini Polaroid Camerafor Girls with Flash Li..." rating="3" totalRating="(60)" price="79.00" border={true} bg="transparent" stock={stock} stockAmount="70" />
-                            <ProductLayout image={true} blankimg={false} percentValue="50%" percentTag={false} percentTagRound={true} category="TELEVISION" title="AG OLED65CXPUA 4K Smart OLED TV New ..." rating="5" totalRating="(200)" price="2,799.00" border={true} bg="transparent" stock={stock} stockAmount="50" />
-                            <ProductLayout image={true} blankimg={false} percentValue="30%" percentTag={false} percentTagRound={false} category="LAPTOP" title="Ultra Slim Laptop 14 inch 8GB RAM..." rating="4" totalRating="(120)" price="999.00" border={true} bg="transparent" stock={stock} stockAmount="30" />
-                            <ProductLayout image={true} blankimg={false} percentValue="20%" percentTag={false} percentTagRound={true} category="HEADPHONES" title="Wireless Noise Cancelling Headphones..." rating="4" totalRating="(80)" price="199.00" border={true} bg="transparent" stock={stock} stockAmount="40" />
+                            <ProductLayout image={true} blankimg={false} percentValue="40%" percentTag={false} percentTagRound={false} category="CAMERA" title="Mini Polaroid Camerafor Girls with Flash Li..." rating="3" totalRating="(60)" price="79.00" border={true} bg="transparent" priceHilight={true}stock={stock} stockAmount="70" />
+                            <ProductLayout image={true} blankimg={false} percentValue="50%" percentTag={false} percentTagRound={true} category="TELEVISION" title="AG OLED65CXPUA 4K Smart OLED TV New ..." rating="5" totalRating="(200)" price="2,799.00"delPrice={"$5,200.00"} border={true} bg="transparent" priceHilight={false}stock={stock} stockAmount="50" />
+                            <ProductLayout image={true} blankimg={false} percentValue="30%" percentTag={false} percentTagRound={false} category="LAPTOP" title="Ultra Slim Laptop 14 inch 8GB RAM..." rating="4" totalRating="(120)" price="999.00" border={true} bg="transparent" priceHilight={true}stock={stock} stockAmount="30" />
+                            <ProductLayout image={true} blankimg={false} percentValue="20%" percentTag={false} percentTagRound={true} category="HEADPHONES" title="Wireless Noise Cancelling Headphones..." rating="4" totalRating="(80)" price="199.00" border={true} delPrice={"$230.00"} bg="transparent"priceHilight={false} stock={stock} stockAmount="40" />
                         </Slider>
                     </div>
                 </div>

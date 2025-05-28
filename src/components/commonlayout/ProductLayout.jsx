@@ -4,10 +4,10 @@ import { BsCart3 } from "react-icons/bs";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { IoShareSocialOutline } from "react-icons/io5";
 
-const ProductLayout = ({percentTag,percentTagRound,priceHilight, percentValue, category, title, rating, totalRating, price, border, bg, stock, stockAmount,image, delPrice,text}) => { 
+const ProductLayout = ({percentTag,springBox,percentTagRound,priceHilight, percentValue, category, title, rating, totalRating, price, border, bg, stock, stockAmount,image, delPrice,text}) => { 
     let [ratingValue, setRatingValue] = useState(new Array(+rating).fill(rating))
   return (
-    <div style={{background:bg}} className=' mx-0.5 border border-transparent p-6 hover:border-[rgba(48,48,48,0.25)] duration-300  rounded-lg group '>
+    <div style={{background:bg}}  className=' mx-0.5 border border-transparent p-6 hover:border-[rgba(48,48,48,0.25)] duration-300  rounded-lg group '>
         <div className=' relative'>
             {/* {blankimg &&
                 <div className='w-[236px] h-[214px] bg-[#d9d9d9] mt-6 ml-6 mr-[25px] mb-10 '></div>
@@ -17,6 +17,8 @@ const ProductLayout = ({percentTag,percentTagRound,priceHilight, percentValue, c
             ||
             <div className='w-[236px] h-[214px]  bg-[#d9d9d9] '></div>
             }
+
+            
             {percentTag &&
             <div className=' bg-[#ff624c] py-[8px] px-[20px] absolute -top-4  right-[-3px] rounded-md font-["Montserrat"] font-bold text-base text-white'>{percentValue}</div>
             }
