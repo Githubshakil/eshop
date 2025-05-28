@@ -29,13 +29,9 @@ const BottomBar = () => {
           }
         }
           
-          
-          
-
         document.addEventListener('mousedown', handleClickOutSide)
         return () => {
           document.removeEventListener('mousedown', handleClickOutSide)
-          
         }
       },[])
 
