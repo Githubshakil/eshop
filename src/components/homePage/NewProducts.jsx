@@ -48,11 +48,11 @@ const NewProducts = () => {
                 
 
             <div className='flex items-center justify-between'>
-            <ProductLayout  percentValue="40%" percentTag = {true} category = "WATCH" title= "Orange Watch 12 High Quality Health Sensor..." rating = "3" totalRating="(120)" price="959.99" border={true} bg="transparent" stock={true} stockAmount ="50" /> 
-            <ProductLayout  percentValue="40%" percentTag = {false} category = "TABLET" title= "Ultra Tablet Qwerty HD 10765 Series Low Pri..." rating = "2" totalRating="(100)" price="799.00" border={true} bg="transparent" stock={true} stockAmount ="50"/> 
-            <ProductLayout  percentValue="40%" percentTag = {false} category = "AUDIO" title= "QuietComfort 45 Wireless Headphone ..." rating = "3" totalRating="(120)" price="329.99" border={true} bg="transparent" stock={true} stockAmount ="50" /> 
-            <ProductLayout  percentValue="40%" percentTag = {false} category = "LAPTOP" title= "Surface Laptop 4 XPS 13 Plus 64GB i7 Touch ..." rating = "3" totalRating="(120)" price="2,399.99" border={true} bg="transparent" stock={true} stockAmount ="50" /> 
-            <ProductLayout  percentValue="50%" percentTag = {true} category = "CAMERA" title= "CamPro HERO10 Black Sleek Design 2023 4K ..." rating = "5" totalRating="(20)" price="1,499.99" border={true} bg="transparent" stock={true} stockAmount ="50"/> 
+            <ProductLayout  percentValue="40%" percentTag = {true} category = "WATCH" title= "Orange Watch 12 High Quality Health Sensor..." rating = "3" totalRating="(120)" price="959.99"priceHilight={false} delPrice={"$1,919.99"} border={true} bg="transparent" stock={false} stockAmount ="50" /> 
+            <ProductLayout  percentValue="40%" percentTag = {false} category = "TABLET" title= "Ultra Tablet Qwerty HD 10765 Series Low Pri..." rating = "2" totalRating="(100)" price="799.00"priceHilight={true}  border={true} bg="transparent" stock={false} stockAmount ="50"/> 
+            <ProductLayout  percentValue="40%" percentTag = {false} category = "AUDIO" title= "QuietComfort 45 Wireless Headphone ..." rating = "3" totalRating="(120)" price="329.99"priceHilight={true} border={true}  bg="transparent" stock={false} stockAmount ="50" /> 
+            <ProductLayout  percentValue="40%" percentTag = {false} category = "LAPTOP" title= "Surface Laptop 4 XPS 13 Plus 64GB i7 Touch ..." rating = "3" totalRating="(120)" price="2,399.99"priceHilight={false} delPrice={"$2,878.00"} border={false} bg="transparent" stock={false} stockAmount ="50" /> 
+            <ProductLayout  percentValue="50%" percentTag = {true} category = "CAMERA" title= "CamPro HERO10 Black Sleek Design 2023 4K ..." rating = "5" totalRating="(20)" price="1,499.99"priceHilight={true}  border={true} bg="transparent" stock={false} stockAmount ="50"/> 
             </div>
             <div className='text-center mt-[64px]'>
               <Button text={"Load More"} border='1px solid' color='#ff624c' bg='none'  />

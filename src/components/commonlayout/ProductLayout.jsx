@@ -4,7 +4,7 @@ import { BsCart3 } from "react-icons/bs";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { IoShareSocialOutline } from "react-icons/io5";
 
-const ProductLayout = ({percentTag,percentTagRound, percentValue, category, title, rating, totalRating, price, border, bg, stock, stockAmount,image, delPrice,text}) => { 
+const ProductLayout = ({percentTag,percentTagRound,priceHilight, percentValue, category, title, rating, totalRating, price, border, bg, stock, stockAmount,image, delPrice,text}) => { 
     let [ratingValue, setRatingValue] = useState(new Array(+rating).fill(rating))
   return (
     <div style={{background:bg}} className=' mx-0.5 border border-transparent p-6 hover:border-[rgba(48,48,48,0.25)] duration-300  rounded-lg group '>
@@ -15,10 +15,10 @@ const ProductLayout = ({percentTag,percentTagRound, percentValue, category, titl
             {image && 
             <img className='w-full' src="images/productimg.png" alt="productimg" />
             ||
-            <div className='w-full h-[214px] bg-[#d9d9d9] '></div>
+            <div className='w-[236px] h-[214px]  bg-[#d9d9d9] '></div>
             }
             {percentTag &&
-            <div className='bg-[#ff624c] py-[8px] px-[20px] absolute -top-2  right-[-4px] rounded-md font-["Montserrat"] font-bold text-base text-white'>{percentValue}</div>
+            <div className=' bg-[#ff624c] py-[8px] px-[20px] absolute -top-4  right-[-3px] rounded-md font-["Montserrat"] font-bold text-base text-white'>{percentValue}</div>
             }
            {percentTagRound&&
            <div className='bg-[#ff624c] py-[25px] px-[20px] absolute -top-2  right-[-6px] rounded-[50%] font-["Montserrat"] font-bold text-base text-white'>{percentValue}</div>
@@ -47,7 +47,12 @@ const ProductLayout = ({percentTag,percentTagRound, percentValue, category, titl
                 <span className='font-["Montserrat"] font-normal text-base text-[#303030]'>{totalRating}</span>
             </div>
            <div className='flex items-center gap-[10px]'>
+             {priceHilight &&
              <p className='font-["Poppins"] font-semibold text-[24px] '>${price}</p>
+             ||
+            <p className='font-["Poppins"] font-semibold text-[24px] leading-[30px] text-[#ff624c]'>${price}</p>
+
+             }
              {delPrice &&
                 <del className='font-["Montserrat"] text-base font-normal leading-6 text-[#303030]'>{delPrice}</del>
              }

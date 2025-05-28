@@ -72,7 +72,7 @@ const FeatureProduct = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 5,
     slidesToScroll: 2,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
@@ -91,12 +91,12 @@ const FeatureProduct = () => {
               <Slider {...settings}>
             
             
-            <ProductLayout image={true} blankimg={false} percentValue="40%" percentTag = {true} category = "PHONE" title= "JPhone 13 High Quality Value Buy Best Cam..." rating = "3" totalRating="(100)" price="599.00" delPrice={"$999.00"} border={true} bg="transparent" stock={false} stockAmount ="50" /> 
-            <ProductLayout image={true} blankimg={false} percentValue="40%" percentTag = {false} category = "AUDIO" title= "WH-1000XM4 Wireless Headphones High Qu..." rating = "2" totalRating="(10)" price="59.00" border={true} bg="transparent" stock={false} stockAmount ="50"/> 
-            <ProductLayout image={true} blankimg={false} percentValue="40%" percentTag = {false} category = "LAPTOP" title= "S21 Laptop Ultra HD LED Screen Feature 2023 ..." rating = "3" totalRating="(60)" price="1,199.00" border={true} bg="transparent" stock={false} stockAmount ="50" /> 
-            <ProductLayout image={true} blankimg={false} percentValue="40%" percentTag = {false} category = "CAMERA" title= "Mini Polaroid Camerafor Girls with Flash Li..." rating = "3" totalRating="(60)" price="79.00" border={true} bg="transparent" stock={false} stockAmount ="50" /> 
-            <ProductLayout image={true} blankimg={false} percentValue="50%" percentTag = {true} category = "TELEVISION" title= "AG OLED65CXPUA 4K Smart OLED TV New ..." rating = "5" totalRating="(200)" price="2,799.00" border={true} bg="transparent" stock={false} stockAmount ="50"/> 
-            <ProductLayout image={true} blankimg={false} percentValue="40%" percentTag = {false} category = "LAPTOP" title= "S21 Laptop Ultra HD LED Screen Feature 2023 ..." rating = "4" totalRating="(160)" price="1,199.00" border={true} bg="transparent" stock={false} stockAmount ="50" /> 
+            <ProductLayout image={true} blankimg={false} percentValue="40%" percentTag = {true} category = "PHONE" title= "JPhone 13 High Quality Value Buy Best Cam..." rating = "3" totalRating="(100)" price="599.00"priceHilight={false} delPrice={"$999.00"} border={true} bg="transparent" stock={false} stockAmount ="50" /> 
+            <ProductLayout image={true} blankimg={false} percentValue="40%" percentTag = {false} category = "AUDIO" title= "WH-1000XM4 Wireless Headphones High Qu..." rating = "2" totalRating="(10)" price="59.00"priceHilight={true} border={true} bg="transparent" stock={false} stockAmount ="50"/> 
+            <ProductLayout image={true} blankimg={false} percentValue="40%" percentTag = {false} category = "LAPTOP" title= "S21 Laptop Ultra HD LED Screen Feature 2023 ..." rating = "3" totalRating="(60)" price="1,199.00"priceHilight={true} border={true} bg="transparent" stock={false} stockAmount ="50" /> 
+            <ProductLayout image={true} blankimg={false} percentValue="40%" percentTag = {false} category = "CAMERA" title= "Mini Polaroid Camerafor Girls with Flash Li..." rating = "3" totalRating="(60)" price="79.00"priceHilight={true} border={true} bg="transparent" stock={false} stockAmount ="50" /> 
+            <ProductLayout image={true} blankimg={false} percentValue="50%" percentTag = {true} category = "TELEVISION" title= "AG OLED65CXPUA 4K Smart OLED TV New ..." rating = "5" totalRating="(200)" price="1,399.00"priceHilight={false} delPrice={"$2,799.00"} border={true} bg="transparent" stock={false} stockAmount ="50"/> 
+            <ProductLayout image={true} blankimg={false} percentValue="40%" percentTag = {false} category = "LAPTOP" title= "S21 Laptop Ultra HD LED Screen Feature 2023 ..." rating = "4" totalRating="(160)" price="1,199.00"priceHilight={true} border={true} bg="transparent" stock={false} stockAmount ="50" /> 
 
               
          </Slider>
