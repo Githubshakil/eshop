@@ -57,7 +57,7 @@ const ProductLayout = ({percentTag,percentTagRound, percentValue, category, titl
             <div className='w-full h-[30px] bg-[rgba(48,48,48,0.25)] rounded-[25px] relative group'>
                     <div className='w-1/2 h-[30px] bg-[rgb(48,48,48)] rounded-[25px] text-center text-white font-["Montserrat"] text-base font-bold leading-6 group-hover:bg-[#ff624c] duration-300  '>
                     </div>
-                    <p className=' w-full absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-center text-white font-["Montserrat"] text-base font-bold leading-6 '>{stockAmount} AVAILABLE</p>
+                    <p className=' w-full absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-center text-white font-["Montserrat"] text-base font-bold leading-6 '>{stockAmount}% AVAILABLE</p>
                         
             </div>
             }
