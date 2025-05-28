@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const Button = ({
   text,
@@ -10,7 +10,7 @@ const Button = ({
   paddingY = 16,
   paddingX = 40,
   radius = 10,
-  border = "1px solid #ff624c"
+  border = "1px solid #ff624c",
 }) => {
   return (
     <button
@@ -23,7 +23,7 @@ const Button = ({
         padding: `${paddingY}px ${paddingX}px`,
         borderRadius: `${radius}px`,
         cursor: "pointer",
-        border: border
+        border: border,
       }}
     >
       {text}
@@ -31,4 +31,4 @@ const Button = ({
   );
 };
 
-export default Button
+export default Button;

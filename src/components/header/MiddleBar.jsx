@@ -29,11 +29,11 @@ const MiddleBar = () => {
             </div>
             <div className="flex flex-col items-start cursor-pointer">
               <p className='font-["Montserrat"] text-base font-normal leading-6'>
-              Cart
-            </p>
-            <span className='font-["Montserrat"] font-bold text-base leading-5'>
-              $ 150,00
-            </span>
+                Cart
+              </p>
+              <span className='font-["Montserrat"] font-bold text-base leading-5'>
+                $ 150,00
+              </span>
             </div>
           </div>
 
@@ -41,14 +41,14 @@ const MiddleBar = () => {
             <div className="absolute  left-0 cursor-pointer  hover:text-[#ff624c] transition-transform duration-200 ">
               <UserIcon />
             </div>
-           <div className="flex flex-col items-start cursor-pointer">
-             <p className='font-["Montserrat"] text-base font-normal leading-6'>
-              User
-            </p>
-            <span className='font-["Montserrat"] font-bold text-base leading-5'>
-              Account
-            </span>
-           </div>
+            <div className="flex flex-col items-start cursor-pointer">
+              <p className='font-["Montserrat"] text-base font-normal leading-6'>
+                User
+              </p>
+              <span className='font-["Montserrat"] font-bold text-base leading-5'>
+                Account
+              </span>
+            </div>
           </div>
         </div>
       </div>

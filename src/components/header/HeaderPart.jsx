@@ -1,16 +1,16 @@
-import React from 'react'
-import TopBar from './TopBar'
-import MiddleBar from './MiddleBar'
-import BottomBar from './BottomBar'
+import React from "react";
+import TopBar from "./TopBar";
+import MiddleBar from "./MiddleBar";
+import BottomBar from "./BottomBar";
 
 const HeaderPart = () => {
   return (
-   <>
-        <TopBar />
-        <MiddleBar />
-        <BottomBar />
-   </>
-  )
-}
+    <>
+      <TopBar />
+      <MiddleBar />
+      <BottomBar />
+    </>
+  );
+};
 
-export default HeaderPart
+export default HeaderPart;

@@ -1,14 +1,14 @@
-import React from 'react'
-import FooterTop from './FooterTop'
-import FooterBottom from './FooterBottom'
+import React from "react";
+import FooterTop from "./FooterTop";
+import FooterBottom from "./FooterBottom";
 
 const Footer = () => {
   return (
     <>
-        <FooterTop />
-        <FooterBottom />
+      <FooterTop />
+      <FooterBottom />
     </>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

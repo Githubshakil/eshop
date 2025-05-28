@@ -6,7 +6,7 @@ import ProductLayout from "../commonlayout/ProductLayout";
 import Button from "../commonlayout/Button";
 
 const NewProducts = () => {
-  // Define the stock variable, for example as a boolean or a value expected by ProductLayout
+  
   const [selectedCategory, setSelectedCategory] = useState("all");
 
   const cetagories = [
