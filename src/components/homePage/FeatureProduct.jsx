@@ -95,7 +95,7 @@ const FeatureProduct = () => {
             priceHilight={false}
             delPrice={"$999.00"}
             border={true}
-            bg="transparent"
+            customStyle={"bg-tranparent hover:border-[#303030]/25"}
             stock={false}
             stockAmount="50"
           />
@@ -111,7 +111,7 @@ const FeatureProduct = () => {
             price="59.00"
             priceHilight={true}
             border={true}
-            bg="transparent"
+            customStyle={"bg-tranparent hover:border-[#303030]/25"}
             stock={false}
             stockAmount="50"
           />
@@ -127,7 +127,7 @@ const FeatureProduct = () => {
             price="1,199.00"
             priceHilight={true}
             border={true}
-            bg="transparent"
+            customStyle={"bg-tranparent hover:border-[#303030]/25"}
             stock={false}
             stockAmount="50"
           />
@@ -143,7 +143,7 @@ const FeatureProduct = () => {
             price="79.00"
             priceHilight={true}
             border={true}
-            bg="transparent"
+            customStyle={"bg-tranparent hover:border-[#303030]/25"}
             stock={false}
             stockAmount="50"
           />
@@ -160,7 +160,7 @@ const FeatureProduct = () => {
             priceHilight={false}
             delPrice={"$2,799.00"}
             border={true}
-            bg="transparent"
+            customStyle={"bg-tranparent hover:border-[#303030]/25"}
             stock={false}
             stockAmount="50"
           />
@@ -176,7 +176,7 @@ const FeatureProduct = () => {
             price="1,199.00"
             priceHilight={true}
             border={true}
-            bg="transparent"
+            customStyle={"bg-tranparent hover:border-[#303030]/25"}
             stock={false}
             stockAmount="50"
           />

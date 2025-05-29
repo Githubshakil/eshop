@@ -47,7 +47,7 @@ const FooterBottom = () => {
                 <Link
                   to="https://maps.app.goo.gl/gZ7SG15p6xTnDNrT8"
                   target="_blank"
-                  className="  text-[#303030] font-['Montserrat'] text-base font-normal leading-6 hover:text-[#ff624c] transition-all duration-300"
+                  className="  text-[#303030]  font-['Montserrat'] text-base font-normal leading-6 hover:text-[#ff624c] transition-all duration-300"
                 >
                   123 Main Street, Suite 105, Anytown USA
                 </Link>

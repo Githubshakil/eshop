@@ -16,18 +16,19 @@ const ProductLayout = ({
   totalRating,
   price,
   border,
-  bg,
   stock,
   stockAmount,
   image,
   delPrice,
   text,
+  roundIcon=true,
+  imageHeight="214px",
+  customStyle
 }) => {
   let [ratingValue, setRatingValue] = useState(new Array(+rating).fill(rating));
   return (
     <div
-      style={{ background: bg }}
-      className=" mx-0.5 border border-transparent p-6 hover:border-[rgba(48,48,48,0.25)] duration-300  rounded-lg group "
+      className={`${customStyle} mx-0.5 border border-transparent p-6  duration-300  rounded-lg group`}
     >
       <div className=" relative">
         {/* {blankimg &&
@@ -39,7 +40,7 @@ const ProductLayout = ({
             src="images/productimg.png"
             alt="productimg"
           />
-        )) || <div className="w-[236px] h-[214px]  bg-[#d9d9d9] "></div>}
+        )) || <div className="w-full  bg-[#d9d9d9] " style={{height:imageHeight}}></div>}
 
         {percentTag && (
           <div className=' bg-[#ff624c] py-[8px] px-[20px] absolute -top-4  right-[-3px] rounded-md font-["Montserrat"] font-bold text-base text-white'>
@@ -51,7 +52,8 @@ const ProductLayout = ({
             {percentValue}
           </div>
         )}
-        <div className="flex items-center justify-center  gap-[18px] absolute bottom-[6px] left-[30px] scale-0 group-hover:scale-100 duration-300">
+        {roundIcon &&
+        <div className=" w-full flex items-center justify-center  gap-[18px] absolute bottom-[6px] left-[50%] -translate-x-[50%] scale-0 group-hover:scale-100 duration-300">
           <div className="h-[50px] w-[50px] rounded-full bg-white border border-[#ff624c] flex items-center justify-center text-[25px] text-[#ff624c] hover:bg-[#ff624c] hover:text-white duration-300 cursor-pointer">
             <BsCart3 />
           </div>
@@ -62,6 +64,8 @@ const ProductLayout = ({
             <IoShareSocialOutline />
           </div>
         </div>
+        }
+        
       </div>
       <div>
         <p className='font-["Montserrat"] font-normal text-sm leading-5 uppercase  tracking-[5px] mt-[46px] mb-4 text-[#303030]'>
@@ -81,7 +85,7 @@ const ProductLayout = ({
         </div>
         <div className="flex items-center gap-[10px]">
           {(priceHilight && (
-            <p className='font-["Poppins"] font-semibold text-[24px] '>
+            <p className='font-["Poppins"] font-semibold text-[24px] leading-[30px]'>
               ${price}
             </p>
           )) || (
@@ -97,10 +101,10 @@ const ProductLayout = ({
         </div>
 
         {stock && (
-          <div className="w-full h-[30px] bg-[rgba(48,48,48,0.25)] rounded-[25px] relative group">
-            <div className='w-1/2 h-[30px] bg-[rgb(48,48,48)] rounded-[25px] text-center text-white font-["Montserrat"] text-base font-bold leading-6 group-hover:bg-[#ff624c] duration-300  '></div>
+          <div className="w-full h-[30px] bg-[rgba(48,48,48,0.25)] rounded-[25px] relative group mt-8">
+            <div className={` h-[30px] bg-[rgb(48,48,48)] rounded-[25px] text-center text-white font-["Montserrat"] text-base font-bold leading-6 group-hover:bg-[#ff624c] duration-300 `} style={{width:`${stockAmount}%`}}></div>
             <p className=' w-full absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-center text-white font-["Montserrat"] text-base font-bold leading-6 '>
-              {stockAmount}% AVAILABLE
+              {stockAmount < 80 ? `${stockAmount}% AVAILABLE` : "LIMITED STOCK"}
             </p>
           </div>
         )}

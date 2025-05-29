@@ -71,7 +71,7 @@ const TopRightBar = () => {
   };
 
   return (
-    <div className="flex justify-end items-center gap-[49px] ">
+    <div className="flex justify-end items-center gap-[49px]  ">
       <div>
         <select
           className="cursor-pointer"
@@ -91,7 +91,7 @@ const TopRightBar = () => {
       </div>
 
       <select
-        className="w-[150px] hidden "
+        className="w-[150px] hidden"
         name="country"
         value={selectedCountry?.value || ""}
         onChange={(e) => {
@@ -105,14 +105,14 @@ const TopRightBar = () => {
         }}
       >
         {countries.map((country) => (
-          <option key={country.value} value={country.value}>
+          <option key={country.value} value={country.value} >
             {country.name}
           </option>
         ))}
       </select>
       <div ref={countryDropdownRef} className="relative inline-block ">
         <div
-          className=' w-[175px] p-2 cursor-pointer flex items-center relative  before:content-[""] before:bg-[rgba(48,48,48,0.25)] before:absolute before:w-[1px] before:h-[32px] before:right-[-15px] before:top-[50%] before:-translate-[50%] after:content-[""] after:bg-[rgba(48,48,48,0.25)] after:absolute after:w-[1px] after:h-[32px] after:left-[-25px] after:top-[50%] after:-translate-[50%]'
+          className=' w-[175px] p-2 cursor-pointer flex items-center relative  before:content-[""] before:bg-[rgba(48,48,48,0.25)] before:absolute before:w-[1px] before:h-[32px] before:right-[-16px] before:top-[50%] before:-translate-[50%] after:content-[""] after:bg-[rgba(48,48,48,0.25)] after:absolute after:w-[1px] after:h-[32px] after:left-[-16px] after:top-[50%] after:-translate-[50%]'
           onClick={() => setIsOpen(!isOpen)}
         >
           {selectedCountry ? (

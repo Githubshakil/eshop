@@ -4,6 +4,7 @@ import SubHeading from "../commonlayout/SubHeading";
 import { IoIosArrowDown } from "react-icons/io";
 import ProductLayout from "../commonlayout/ProductLayout";
 import Button from "../commonlayout/Button";
+import ArrowDown from "../../icons/ArrowDown";
 
 const NewProducts = () => {
   
@@ -27,8 +28,9 @@ const NewProducts = () => {
               <span className='font-["Montserrat"] text-base font-normal leading-6 text-[#303030]'>
                 Sort by
               </span>
-              <select
-                className='w-[200px] text-left cursor-pointer flex  text-[#FF624C] font-["Montserrat"] text-base font-normal leading-6'
+              <div className="flex items-center relative w-[250px]">
+                <select
+                className='ml-4 absolute  -top-3 left-0 w-[250px]  text-left cursor-pointer flex  text-[#FF624C] font-["Montserrat"] text-base font-normal leading-6'
                 name="cetagories"
                 value={selectedCategory}
                 onChange={(e) => {
@@ -45,11 +47,13 @@ const NewProducts = () => {
                   </option>
                 ))}
               </select>
+              {/* <ArrowDown className=" absolute -top-2 right-0  w-[16px] h-[16px]"/> */}
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="flex items-center justify-between">
+        <div className="grid grid-cols-5 gap-6">
           <ProductLayout
             percentValue="40%"
             percentTag={true}
@@ -61,7 +65,7 @@ const NewProducts = () => {
             priceHilight={false}
             delPrice={"$1,919.99"}
             border={true}
-            bg="transparent"
+            customStyle={"bg-tranparent hover:border-[#303030]/25"}
             stock={false}
             stockAmount="50"
           />
@@ -75,7 +79,7 @@ const NewProducts = () => {
             price="799.00"
             priceHilight={true}
             border={true}
-            bg="transparent"
+            customStyle={"bg-tranparent hover:border-[#303030]/25"}
             stock={false}
             stockAmount="50"
           />
@@ -89,7 +93,7 @@ const NewProducts = () => {
             price="329.99"
             priceHilight={true}
             border={true}
-            bg="transparent"
+            customStyle={"bg-tranparent hover:border-[#303030]/25"}
             stock={false}
             stockAmount="50"
           />
@@ -104,7 +108,7 @@ const NewProducts = () => {
             priceHilight={false}
             delPrice={"$2,878.00"}
             border={false}
-            bg="transparent"
+            customStyle={"bg-tranparent hover:border-[#303030]/25"}
             stock={false}
             stockAmount="50"
           />
@@ -118,7 +122,7 @@ const NewProducts = () => {
             price="1,499.99"
             priceHilight={true}
             border={true}
-            bg="transparent"
+            customStyle={"bg-tranparent hover:border-[#303030]/25"}
             stock={false}
             stockAmount="50"
           />

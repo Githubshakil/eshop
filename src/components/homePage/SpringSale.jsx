@@ -145,10 +145,10 @@ const SpringSale = () => {
               </div>
             </div>
             {/* right side */}
-            <div className="w-full lg:w-1/2 mt-10 lg:mt-0 flex flex-col">
+            <div className="w-full lg:w-[950px] mt-10 lg:mt-0 flex flex-col">
               <Slider {...settings}>
                 <ProductLayout
-                  image={true}
+                  image={false}
                   blankimg={false}
                   percentValue="40%"
                   percentTag={false}
@@ -159,13 +159,15 @@ const SpringSale = () => {
                   totalRating="(60)"
                   price="79.00"
                   border={true}
-                  bg="transparent"
+                  customStyle={"bg-[#EAEAEA] hover:bg-[#ffffff]"}
                   priceHilight={true}
                   stock={stock}
                   stockAmount="70"
+                  roundIcon={false}
+                  imageHeight="345px"
                 />
                 <ProductLayout
-                  image={true}
+                  image={false}
                   blankimg={false}
                   percentValue="50%"
                   percentTag={false}
@@ -177,13 +179,15 @@ const SpringSale = () => {
                   price="2,799.00"
                   delPrice={"$5,200.00"}
                   border={true}
-                  bg="transparent"
+                  customStyle={"bg-[#EAEAEA] hover:bg-[#ffffff]"}
                   priceHilight={false}
                   stock={stock}
                   stockAmount="50"
+                  roundIcon={false}
+                  imageHeight="345px"
                 />
                 <ProductLayout
-                  image={true}
+                  image={false}
                   blankimg={false}
                   percentValue="30%"
                   percentTag={false}
@@ -194,13 +198,15 @@ const SpringSale = () => {
                   totalRating="(120)"
                   price="999.00"
                   border={true}
-                  bg="transparent"
+                  customStyle={"bg-[#EAEAEA] hover:bg-[#ffffff]"}
                   priceHilight={true}
                   stock={stock}
-                  stockAmount="30"
+                  stockAmount="90"
+                  roundIcon={false}
+                  imageHeight="345px"
                 />
                 <ProductLayout
-                  image={true}
+                  image={false}
                   blankimg={false}
                   percentValue="20%"
                   percentTag={false}
@@ -212,10 +218,12 @@ const SpringSale = () => {
                   price="199.00"
                   border={true}
                   delPrice={"$230.00"}
-                  bg="transparent"
+                  customStyle={"bg-[#EAEAEA] hover:bg-[#ffffff]"}
                   priceHilight={false}
                   stock={stock}
                   stockAmount="40"
+                  roundIcon={false}
+                  imageHeight="345px"
                 />
               </Slider>
             </div>
