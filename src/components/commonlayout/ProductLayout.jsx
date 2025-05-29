@@ -43,12 +43,12 @@ const ProductLayout = ({
         )) || <div className="w-full  bg-[#d9d9d9] " style={{height:imageHeight}}></div>}
 
         {percentTag && (
-          <div className=' bg-[#ff624c] py-[8px] px-[20px] absolute -top-4  right-[-3px] rounded-md font-["Montserrat"] font-bold text-base text-white'>
+          <div className=' bg-[#ff624c] py-[8px] px-[20px] absolute -top-2  right-[-9px] rounded-md font-["Montserrat"] font-bold text-base text-white'>
             {percentValue}
           </div>
         )}
         {percentTagRound && (
-          <div className='bg-[#ff624c] py-[25px] px-[20px] absolute -top-2  right-[-6px] rounded-[50%] font-["Montserrat"] font-bold text-base text-white'>
+          <div className='bg-[#ff624c] py-[25px] px-[20px] absolute -top-0  right-0 rounded-[50%] font-["Montserrat"] font-bold text-base text-white'>
             {percentValue}
           </div>
         )}
