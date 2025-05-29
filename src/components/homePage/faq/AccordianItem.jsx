@@ -6,7 +6,7 @@ const AccordianItem = ({ title, content, onToggle, isOpen }) => {
     <>
       <div
         onClick={onToggle}
-        className='mb-6 w-full p-3 text-left bg-white py-[32px] px-12 pl-[112px] rounded-[25px] font-["Poppins"] font-semibold text-[24px] relative group'
+        className=' w-full p-3 text-left bg-white py-[32px] px-12 pl-[112px] rounded-[25px] font-["Poppins"] font-semibold text-[24px] relative group'
       >
         <button>
           <div
@@ -21,7 +21,7 @@ const AccordianItem = ({ title, content, onToggle, isOpen }) => {
           {title}
         </button>
         {isOpen && (
-          <div className='font-["Montserrat] font-normal text-base text-[#303030] mt-6 leading-[30px] '>
+          <div className='font-["Montserrat] font-normal text-base text-[#303030] mt-6 leading-[30px] duration-300 '>
             {content}
           </div>
         )}
