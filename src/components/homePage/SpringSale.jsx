@@ -221,7 +221,7 @@ const SpringSale = () => {
                   customStyle={"bg-[#EAEAEA] hover:bg-[#ffffff]"}
                   priceHilight={false}
                   stock={stock}
-                  stockAmount="40"
+                  stockAmount="10"
                   roundIcon={false}
                   imageHeight="345px"
                 />
