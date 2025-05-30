@@ -150,9 +150,9 @@ const SpringSale = () => {
                 <ProductLayout
                   image={false}
                   blankimg={false}
-                  percentValue="40%"
+                  // percentValue="40%"
                   percentTag={false}
-                  percentTagRound={false}
+                  percentTagRound={true}
                   category="CAMERA"
                   title="Mini Polaroid Camerafor Girls with Flash Li..."
                   rating="3"
@@ -162,14 +162,14 @@ const SpringSale = () => {
                   customStyle={"bg-[#EAEAEA] hover:bg-[#ffffff]"}
                   priceHilight={true}
                   stock={stock}
-                  stockAmount="70"
+                  stockAmount="40"
                   roundIcon={false}
                   imageHeight="345px"
                 />
                 <ProductLayout
                   image={false}
                   blankimg={false}
-                  percentValue="50%"
+                  // percentValue="50%"
                   percentTag={false}
                   percentTagRound={true}
                   category="TELEVISION"
@@ -182,16 +182,16 @@ const SpringSale = () => {
                   customStyle={"bg-[#EAEAEA] hover:bg-[#ffffff]"}
                   priceHilight={false}
                   stock={stock}
-                  stockAmount="50"
+                  stockAmount="65"
                   roundIcon={false}
                   imageHeight="345px"
                 />
                 <ProductLayout
                   image={false}
                   blankimg={false}
-                  percentValue="30%"
+                  // percentValue="30%"
                   percentTag={false}
-                  percentTagRound={false}
+                  percentTagRound={true}
                   category="LAPTOP"
                   title="Ultra Slim Laptop 14 inch 8GB RAM..."
                   rating="4"
@@ -201,14 +201,14 @@ const SpringSale = () => {
                   customStyle={"bg-[#EAEAEA] hover:bg-[#ffffff]"}
                   priceHilight={true}
                   stock={stock}
-                  stockAmount="90"
+                  stockAmount="82"
                   roundIcon={false}
                   imageHeight="345px"
                 />
                 <ProductLayout
                   image={false}
                   blankimg={false}
-                  percentValue="20%"
+                  // percentValue="20%"
                   percentTag={false}
                   percentTagRound={true}
                   category="HEADPHONES"
@@ -221,7 +221,7 @@ const SpringSale = () => {
                   customStyle={"bg-[#EAEAEA] hover:bg-[#ffffff]"}
                   priceHilight={false}
                   stock={stock}
-                  stockAmount="10"
+                  stockAmount="60"
                   roundIcon={false}
                   imageHeight="345px"
                 />

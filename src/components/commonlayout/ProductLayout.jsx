@@ -48,8 +48,8 @@ const ProductLayout = ({
           </div>
         )}
         {percentTagRound && (
-          <div className='bg-[#ff624c] py-[25px] px-[20px] absolute -top-0  right-0 rounded-[50%] font-["Montserrat"] font-bold text-base text-white'>
-            {percentValue}
+          <div className='bg-[#ff624c] py-[25px] px-[20px] absolute -top-0  right-0 rounded-[50%] font-["Montserrat"] font-bold text-base text-white' >
+            {`${stockAmount}%`}
           </div>
         )}
         {roundIcon &&
@@ -104,7 +104,9 @@ const ProductLayout = ({
           <div className="w-full h-[30px] bg-[rgba(48,48,48,0.25)] rounded-[25px] relative group mt-8">
             <div className={` h-[30px] bg-[rgb(48,48,48)] rounded-[25px] text-center text-white font-["Montserrat"] text-base font-bold leading-6 group-hover:bg-[#ff624c] duration-300 `} style={{width:`${stockAmount}%`}}></div>
             <p className=' w-full absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-center text-white font-["Montserrat"] text-base font-bold leading-6 '>
-              {stockAmount < 80 ? `${stockAmount}% AVAILABLE` : "LIMITED STOCK"}
+              {stockAmount < 80  ? `${stockAmount}% AVAILABLE` : "LIMITED STOCK"}
+                
+              
             </p>
           </div>
         )}
