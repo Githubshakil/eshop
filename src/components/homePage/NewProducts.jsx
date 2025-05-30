@@ -6,11 +6,9 @@ import ProductLayout from "../commonlayout/ProductLayout";
 import Button from "../commonlayout/Button";
 import ArrowDown from "../../icons/ArrowDown";
 
-
 const NewProducts = () => {
-  
   const [selectedCategory, setSelectedCategory] = useState(false);
-  const dropdownRef = useRef(null)
+  const dropdownRef = useRef(null);
 
   useEffect(() => {
     const handleClickOutSide = (e) => {
@@ -23,7 +21,7 @@ const NewProducts = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutSide);
     };
-  },[])
+  }, []);
 
   const cetagories = [
     { name: "All Categories", value: "all" },
@@ -33,8 +31,8 @@ const NewProducts = () => {
     { name: "Laptop", value: "laptop" },
     { name: "Camera", value: "camera" },
   ];
- 
- const handleClick = () => {
+
+  const handleClick = () => {
     setSelectedCategory(!selectedCategory);
   };
   return (
@@ -48,14 +46,17 @@ const NewProducts = () => {
                 Sort by
               </span>
               <div className="flex items-center relative  " ref={dropdownRef}>
-                <button onClick={handleClick} 
-                className="flex items-center justify-between w-full text-[#FF624C] font-['Montserrat'] text-base font-normal leading-0 cursor-pointer mr-[100px] ">
-                
+                <button
+                  onClick={handleClick}
+                  className="flex items-center justify-between w-full text-[#FF624C] font-['Montserrat'] text-base font-normal leading-0 cursor-pointer mr-[100px] "
+                >
                   All Categories
-                <ArrowDown 
-                onClick={handleClick}
-                className={`text-[#FF624C] ${selectedCategory ? "rotate-180" : ""} transition-transform duration-300 absolute -top-2 right-0  w-[16px] h-[16px] text-black `}
-                />
+                  <ArrowDown
+                    onClick={handleClick}
+                    className={`text-[#FF624C] ${
+                      selectedCategory ? "rotate-180" : ""
+                    } transition-transform duration-300 absolute -top-2 right-0  w-[16px] h-[16px] text-black `}
+                  />
                 </button>
                 {selectedCategory && (
                   <ul className="absolute top-full left-0 w-full bg-white shadow-lg z-10 hover:bg-gray-500 rounded-md mt-2">
@@ -65,15 +66,14 @@ const NewProducts = () => {
                         className="text-[#303030] font-['Poppins'] hover:text-[#ff624c] bg-white font-semibold transition-all duration-300 cursor-pointer px-4 py-2 hover:bg-gray-300 "
                         onClick={() => {
                           setSelectedCategory(false);
-                          
                         }}
                       >
                         {category.name}
-                      </li>         
+                      </li>
                     ))}
                   </ul>
                 )}
-                  
+
                 {/* <select
                 className='ml-4 absolute  -top-3 left-0 w-[250px]  text-left cursor-pointer flex  text-[#FF624C] font-["Montserrat"] text-base font-normal leading-6'
                 name="cetagories"
