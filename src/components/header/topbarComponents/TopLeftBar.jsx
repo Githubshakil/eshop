@@ -12,7 +12,7 @@ const TopLeftBar = () => {
           target="_blank"
           className="flex items-center gap-2 hover:text-[#ff624c] transition-all duration-300"
         >
-          <Location />
+          <Location className={"hover:text-[#ff624c]"}  />
           123 Main Street, Anytown USA
         </Link>
 

@@ -113,8 +113,7 @@ const BottomBar = () => {
                   <FaAngleDown
                     onClick={handleDropdown}
                     className={`cursor-pointer ${
-                      isDropdownOpen && "rotate-180"
-                    }`}
+                      isDropdownOpen ? "rotate-180": ""} transition-transform duration-300 absolute top-1 -right-6 w-[16px] h-[16px] text-white `}
                   />
                 </button>
                 {isDropdownOpen && (
