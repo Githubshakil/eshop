@@ -8,7 +8,7 @@ import ArrowDown from "../../icons/ArrowDown";
 
 const NewProducts = () => {
   
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedCategory, setSelectedCategory] = useState(false);
 
   const cetagories = [
     { name: "All Categories", value: "all" },
@@ -30,7 +30,7 @@ const NewProducts = () => {
               </span>
               <div className="flex items-center relative w-[250px]">
                 <select
-                className='ml-4 absolute  -top-3 left-0 w-[250px]  text-left cursor-pointer flex  text-[#FF624C] font-["Montserrat"] text-base font-normal leading-6'
+                className='ml-4 absolute  -top-2.5 left-0 w-[230px]  text-left cursor-pointer flex  text-[#FF624C] font-["Montserrat"] text-base font-normal leading-6'
                 name="cetagories"
                 value={selectedCategory}
                 onChange={(e) => {
