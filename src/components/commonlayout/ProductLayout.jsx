@@ -28,7 +28,7 @@ const ProductLayout = ({
   let [ratingValue, setRatingValue] = useState(new Array(+rating).fill(rating));
   return (
     <div
-      className={`${customStyle} mx-0.5 border border-transparent p-6  duration-300  rounded-lg group`}
+      className={`${customStyle} mx-0.5 ml-5 border border-transparent p-6  duration-300  rounded-lg group`}
     >
       <div className=" relative">
         {/* {blankimg &&
@@ -40,7 +40,7 @@ const ProductLayout = ({
             src="images/productimg.png"
             alt="productimg"
           />
-        )) || <div className="w-full  bg-[#d9d9d9] " style={{height:imageHeight}}></div>}
+        )) || <div className="w-full   bg-[#d9d9d9] " style={{height:imageHeight}}></div>}
 
         {percentTag && (
           <div className=' bg-[#ff624c] py-[8px] px-[20px] absolute -top-2  right-[-9px] rounded-md font-["Montserrat"] font-bold text-base text-white'>

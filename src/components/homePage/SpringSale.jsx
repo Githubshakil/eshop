@@ -80,7 +80,7 @@ const SpringSale = () => {
     <>
       <div className="w-full min-h-[829px] bg-[#f4f4f4] mt-[80px]">
         <Container>
-          <div className="flex flex-col lg:flex-row items-center justify-between">
+          <div className="flex flex-col lg:flex-row items-end justify-between ">
             {/* left side */}
             <div className="w-full lg:w-1/2 flex flex-col items-start">
               <div className="pt-[100px] lg:pt-[235px] mb-[40px]">
@@ -145,7 +145,7 @@ const SpringSale = () => {
               </div>
             </div>
             {/* right side */}
-            <div className="w-full lg:w-[950px] mt-10 lg:mt-0 flex flex-col gap-6">
+            <div className="w-full lg:w-[950px] mt-10 lg:mt-0 ">
               <Slider {...settings}>
                 <ProductLayout
                   image={false}
