@@ -23,7 +23,7 @@ const NewProducts = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutSide);
     };
-  })
+  },[])
 
   const cetagories = [
     { name: "All Categories", value: "all" },
