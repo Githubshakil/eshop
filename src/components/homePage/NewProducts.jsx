@@ -65,11 +65,11 @@ const NewProducts = () => {
                         className="text-[#303030] font-['Poppins'] hover:text-[#ff624c] bg-white font-semibold transition-all duration-300 cursor-pointer px-4 py-2 hover:bg-gray-300 "
                         onClick={() => {
                           setSelectedCategory(false);
-                          // Handle category selection logic here
+                          
                         }}
                       >
                         {category.name}
-                      </li>
+                      </li>         
                     ))}
                   </ul>
                 )}
