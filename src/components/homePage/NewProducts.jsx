@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Container from "../commonlayout/Container";
 import SubHeading from "../commonlayout/SubHeading";
 import { IoIosArrowDown } from "react-icons/io";
@@ -6,9 +6,24 @@ import ProductLayout from "../commonlayout/ProductLayout";
 import Button from "../commonlayout/Button";
 import ArrowDown from "../../icons/ArrowDown";
 
+
 const NewProducts = () => {
   
   const [selectedCategory, setSelectedCategory] = useState(false);
+  const dropdownRef = useRef(null)
+
+  useEffect(() => {
+    const handleClickOutSide = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setSelectedCategory(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutSide);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutSide);
+    };
+  })
 
   const cetagories = [
     { name: "All Categories", value: "all" },
@@ -18,6 +33,10 @@ const NewProducts = () => {
     { name: "Laptop", value: "laptop" },
     { name: "Camera", value: "camera" },
   ];
+ 
+ const handleClick = () => {
+    setSelectedCategory(!selectedCategory);
+  };
   return (
     <>
       <Container>
@@ -28,9 +47,35 @@ const NewProducts = () => {
               <span className='font-["Montserrat"] text-base font-normal leading-6 text-[#303030]'>
                 Sort by
               </span>
-              <div className="flex items-center relative w-[250px]">
-                <select
-                className='ml-4 absolute  -top-2.5 left-0 w-[230px]  text-left cursor-pointer flex  text-[#FF624C] font-["Montserrat"] text-base font-normal leading-6'
+              <div className="flex items-center relative  " ref={dropdownRef}>
+                <button onClick={handleClick} 
+                className="flex items-center justify-between w-full text-[#FF624C] font-['Montserrat'] text-base font-normal leading-0 cursor-pointer mr-[100px] ">
+                
+                  All Categories
+                <ArrowDown 
+                onClick={handleClick}
+                className={`text-[#FF624C] ${selectedCategory ? "rotate-180" : ""} transition-transform duration-300 absolute -top-2 right-0  w-[16px] h-[16px] text-black `}
+                />
+                </button>
+                {selectedCategory && (
+                  <ul className="absolute top-full left-0 w-full bg-white shadow-lg z-10 hover:bg-gray-500 rounded-md mt-2">
+                    {cetagories.map((category, index) => (
+                      <li
+                        key={index}
+                        className="text-[#303030] font-['Poppins'] hover:text-[#ff624c] bg-white font-semibold transition-all duration-300 cursor-pointer px-4 py-2 hover:bg-gray-300 "
+                        onClick={() => {
+                          setSelectedCategory(false);
+                          // Handle category selection logic here
+                        }}
+                      >
+                        {category.name}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                  
+                {/* <select
+                className='ml-4 absolute  -top-3 left-0 w-[250px]  text-left cursor-pointer flex  text-[#FF624C] font-["Montserrat"] text-base font-normal leading-6'
                 name="cetagories"
                 value={selectedCategory}
                 onChange={(e) => {
@@ -46,8 +91,7 @@ const NewProducts = () => {
                     {category.name}
                   </option>
                 ))}
-              </select>
-              {/* <ArrowDown className=" absolute -top-2 right-0  w-[16px] h-[16px]"/> */}
+              </select> */}
               </div>
             </div>
           </div>
