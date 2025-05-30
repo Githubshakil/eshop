@@ -145,7 +145,7 @@ const SpringSale = () => {
               </div>
             </div>
             {/* right side */}
-            <div className="w-full lg:w-[950px] mt-10 lg:mt-0 flex flex-col">
+            <div className="w-full lg:w-[950px] mt-10 lg:mt-0 flex flex-col gap-6">
               <Slider {...settings}>
                 <ProductLayout
                   image={false}

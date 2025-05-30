@@ -48,7 +48,7 @@ const ProductLayout = ({
           </div>
         )}
         {percentTagRound && (
-          <div className='bg-[#ff624c] py-[25px] px-[20px] absolute -top-0  right-0 rounded-[50%] font-["Montserrat"] font-bold text-base text-white'>
+          <div className='w-[100px] h-[100px] flex items-center justify-center bg-[#ff624c] py-[25px] px-[20px] absolute -top-0  right-0 rounded-[50%] font-["Montserrat"] font-bold text-[24px] text-white'>
             {`${stockAmount}%`}
           </div>
         )}
