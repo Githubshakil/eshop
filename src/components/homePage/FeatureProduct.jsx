@@ -137,7 +137,7 @@ const FeatureProduct = () => {
             percentValue="40%"
             percentTag={false}
             category="CAMERA"
-            title="Mini Polaroid Camerafor Girls with Flash Li..."
+            title="Mini Polaroid Camera for Girls with Flash Li..."
             rating="3"
             totalRating="(60)"
             price="79.00"
