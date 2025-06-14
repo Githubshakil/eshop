@@ -109,7 +109,9 @@ const BottomBar = () => {
                   onClick={handleDropdown}
                   className="flex items-center gap-4 cursor-pointer"
                 >
+                  
                   Products
+                  
                   <FaAngleDown
                     onClick={handleDropdown}
                     className={`cursor-pointer ${
@@ -119,6 +121,14 @@ const BottomBar = () => {
                 {isDropdownOpen && (
                   <div className=" absolute z-10 mt-2 w-45 bg-white rounded shadow-lg">
                     <ul className="py-2 font-['Montserrat'] font-normal text-[14px] leading-6 text-black">
+                      <li
+                        className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300"
+                        onClick={() => setDropdownOpen(false)}
+                      >
+                        <Link to={"/product-List"}>
+                        All Products
+                        </Link>
+                      </li>
                       <li
                         className="px-4 py-2 hover:bg-gray-200 cursor-pointer  hover:text-[#ff624c] duration-300"
                         onClick={() => setDropdownOpen(false)}
