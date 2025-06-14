@@ -8,14 +8,20 @@ const ProductList = () => {
 
 
   const updateSlider = (type, value)=>{
-    if(type == min ){
+    if(type == 'min' ){
         const newMin = Math.min(parseInt(value), maxValue)
-        setMaxValue(newMin)
+        setMinValue(newMin)
     }else{
-      const newMax = Math.min(parseInt(value), minValue)
-        setMinValue(newMax)
+      const newMax = Math.max(parseInt(value), minValue)
+        setMaxValue(newMax)
     }
   }
+
+   const minPercent =(minValue / 1000) * 100
+   const maxPercent =(maxValue / 1000) * 100
+
+
+
   return (
     <>
     <Container>
@@ -24,26 +30,31 @@ const ProductList = () => {
           <h3 className='font-["Montserrat"] font-bold text-[20px] '>Price</h3>
           <div className='mt-6' >
             <div className='flex justify-between mb-[30px]'>
-              <span className='py-[25px] px-[42px] border border-[rgba(48,48,48,0.25)] rounded-[10px] bg-[#f4f4f4] '> $100</span>
-              <span className='py-[25px] px-[42px] border border-[rgba(48,48,48,0.25)] rounded-[10px] bg-[#f4f4f4] '> $100</span>
+              <span className='py-[25px] px-[42px] border border-[rgba(48,48,48,0.25)] rounded-[10px] bg-[#f4f4f4] '> ${minValue}</span>
+              <span className='py-[25px] px-[42px] border border-[rgba(48,48,48,0.25)] rounded-[10px] bg-[#f4f4f4] '> ${maxValue}</span>
             </div>
               <div className='relative w-full h-2 bg-green-500 rounded '>
-                <div className=' absolute h-full bg-red-500 rounded left-[10%] w-[20%]'></div>
+                <div 
+                className=' absolute h-full bg-red-500 rounded left-[10%] w-[20%]'
+                style={{left: `${minPercent}%` , width: `${maxPercent - minPercent}%` }}
+                ></div>
                 <input 
                 type="range"
                 min="0"
                 max="1000" 
-                value="10"
+                // value={minValue}  
                 step="10"
-                className=' absolute w-full h-2.5 bg-transparent pointer-event-none rounded appearance-none'
+                onChange={(e) => updateSlider('min', e.target.value ) }
+                className=' absolute w-full h-2 bg-transparent pointer-events-none appearance-none'
                 />
                 <input 
                 type="range"
                 min="0"
                 max="1000" 
-                value="200"
+                // value={maxValue}
                 step="10"
-                className=' absolute w-full h-2.5 bg-transparent pointer-event-none rounded appearance-none'
+                 onChange={(e) => updateSlider('max', e.target.value ) }
+                className=' absolute w-full h-2 bg-transparent pointer-events-none appearance-none'
                 />
                 
               </div>
