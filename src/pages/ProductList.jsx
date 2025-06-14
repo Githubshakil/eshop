@@ -3,8 +3,10 @@ import Container from '../../src/components/commonlayout/Container'
 
 
 const ProductList = () => {
-  let [minValue, setMinValue] = useState(0)
-  let [maxValue, setMaxValue] = useState(1000)
+  let [minValue, setMinValue] = useState(minValue)
+  let [maxValue, setMaxValue] = useState(maxValue)
+
+  let []
 
 
   const updateSlider = (type, value)=>{
@@ -17,8 +19,8 @@ const ProductList = () => {
     }
   }
 
-   const minPercent =(minValue / 1000) * 100
-   const maxPercent =(maxValue / 1000) * 100
+   const minPercent =(minValue / maxValue) * 100
+   const maxPercent =(maxValue / minValue) * 100
 
 
 
@@ -30,8 +32,8 @@ const ProductList = () => {
           <h3 className='font-["Montserrat"] font-bold text-[20px] '>Price</h3>
           <div className='mt-6' >
             <div className='flex justify-between mb-[30px]'>
-              <span className='py-[25px] px-[42px] border border-[rgba(48,48,48,0.25)] rounded-[10px] bg-[#f4f4f4] '> ${minValue}</span>
-              <span className='py-[25px] px-[42px] border border-[rgba(48,48,48,0.25)] rounded-[10px] bg-[#f4f4f4] '> ${maxValue}</span>
+              <span className='w-[124px] py-[25px] px-[42px] border border-[rgba(48,48,48,0.25)] rounded-[10px] bg-[#f4f4f4]'></span>
+              <span className='py-[25px] px-[42px] border border-[rgba(48,48,48,0.25)] rounded-[10px] bg-[#f4f4f4]'></span>
             </div>
               <div className='relative w-full h-[2px] bg-[#e8e8e8] rounded '>
                 <div 
@@ -42,7 +44,7 @@ const ProductList = () => {
                 type="range"
                 min="0"
                 max="1000" 
-                // value={minValue}  
+                value={minValue}  
                 step="10"
                 onChange={(e) => updateSlider('min', e.target.value ) }
                 className='absolute w-full h-[2px] bg-transparent pointer-events-none appearance-none'
@@ -51,7 +53,7 @@ const ProductList = () => {
                 type="range"
                 min="0"
                 max="1000" 
-                // value={maxValue}
+                value={maxValue}
                 step="10"
                  onChange={(e) => updateSlider('max', e.target.value ) }
                 className='absolute w-full h-[2px] bg-transparent pointer-events-none appearance-none'
