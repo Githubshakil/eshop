@@ -33,7 +33,7 @@ const ProductList = () => {
               <span className='py-[25px] px-[42px] border border-[rgba(48,48,48,0.25)] rounded-[10px] bg-[#f4f4f4] '> ${minValue}</span>
               <span className='py-[25px] px-[42px] border border-[rgba(48,48,48,0.25)] rounded-[10px] bg-[#f4f4f4] '> ${maxValue}</span>
             </div>
-              <div className='relative w-full h-2 bg-green-500 rounded '>
+              <div className='relative w-full h-[2px] bg-[#e8e8e8] rounded '>
                 <div 
                 className=' absolute h-full bg-red-500 rounded left-[10%] w-[20%]'
                 style={{left: `${minPercent}%` , width: `${maxPercent - minPercent}%` }}
@@ -45,7 +45,7 @@ const ProductList = () => {
                 // value={minValue}  
                 step="10"
                 onChange={(e) => updateSlider('min', e.target.value ) }
-                className=' absolute w-full h-2 bg-transparent pointer-events-none appearance-none'
+                className='absolute w-full h-[2px] bg-transparent pointer-events-none appearance-none'
                 />
                 <input 
                 type="range"
@@ -54,7 +54,7 @@ const ProductList = () => {
                 // value={maxValue}
                 step="10"
                  onChange={(e) => updateSlider('max', e.target.value ) }
-                className=' absolute w-full h-2 bg-transparent pointer-events-none appearance-none'
+                className='absolute w-full h-[2px] bg-transparent pointer-events-none appearance-none'
                 />
                 
               </div>

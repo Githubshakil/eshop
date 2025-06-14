@@ -9,29 +9,27 @@
 .icon:hover path {
       fill: blue;
 }
-/* select {
--webkit-appearance: none;
--moz-appearance: none;
 
-} */
 
 input[type=range]::-webkit-slider-thumb{
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
-    background-color: purple;
+    background-color: #ff624c;
     pointer-events: auto;
     cursor: pointer;
     -webkit-appearance: none;
+    border: none;
     
 }
 input[type=range]::-moz-range-thumb{
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
-    background-color: purple;
+    background-color: #ff624c;
     pointer-events: auto;
     cursor: pointer;
     -webkit-appearance: none;
+    border: none;
     
 }
