@@ -18,6 +18,15 @@ const ProductList = () => {
         setMaxValue(newMax)
     }
   }
+  const updatevalue = (type, value)=>{
+    if(type == 'min' ){
+        const newMin = Math.min(parseInt(value), maxValue)
+        setMinValue(newMin)
+    }else{
+      const newMax = Math.max(parseInt(value), minValue)
+        setMaxValue(newMax)
+    }
+  }
 
    const minPercent =(minValue / 1000) * 100
    const maxPercent =(maxValue / 1000) * 100
@@ -32,15 +41,47 @@ const ProductList = () => {
           <h3 className='font-["Montserrat"] font-bold text-[20px] '>Price</h3>
           <div className='mt-6' >
             <div className='flex justify-between mb-[30px] gap-3'>
-              <span className='w-[124px] py-[25px] px-[42px] border border-[rgba(48,48,48,0.25)] rounded-[10px] bg-[#f4f4f4]'>${minValue}</span>
-              <span className='w-[124px] py-[25px] px-[42px] border border-[rgba(48,48,48,0.25)] rounded-[10px] bg-[#f4f4f4]'>${maxValue}</span>
+              <div className='w-[124px] py-[25px] px-[42px] border border-[rgba(48,48,48,0.25)] rounded-[10px] bg-[#f4f4f4] flex items-center'>
+                <span className="mr-1">$</span>
+                <input 
+                  type="number"
+                  value={minValue}
+                  min={0}
+                  max={1000}
+                  onChange={(e)=>updatevalue('min', e.target.value)}
+                  style={{
+                    MozAppearance: 'textfield',
+                    appearance: 'textfield',
+                    border: 'none',
+                    outline: 'none'
+                  }}
+                  className="hide-number-arrows"
+                /> 
+              </div>
+              <div className='w-[124px] py-[25px] px-[42px] border border-[rgba(48,48,48,0.25)] rounded-[10px] bg-[#f4f4f4] flex items-center'>
+                <span className="mr-1">$</span>
+                <input               
+                  type="number"
+                  value={maxValue}
+                  min={0}
+                  max={1000}
+                  onChange={(e)=>updatevalue('max', e.target.value)}
+                  style={{
+                    MozAppearance: 'textfield',
+                    appearance: 'textfield',
+                    border: 'none',
+                    outline: 'none'
+                  }}
+                  className="hide-number-arrows"
+                /> 
+              </div>
             </div>
-              <div className='relative w-full h-[2px] bg-[#e8e8e8] rounded '>
-                <div 
+            <div className='relative w-full h-[2px] bg-[#e8e8e8] rounded '>
+              <div 
                 className=' absolute h-full bg-red-500 rounded left-[10%] w-[20%]'
                 style={{left: `${minPercent}%` , width: `${maxPercent - minPercent}%` }}
-                ></div>
-                <input 
+              ></div>
+              <input 
                 type="range"
                 min="0"
                 max="1000" 
@@ -48,18 +89,17 @@ const ProductList = () => {
                 step="10"
                 onChange={(e) => updateSlider('min', e.target.value ) }
                 className='absolute w-full h-[2px] bg-transparent pointer-events-none appearance-none'
-                />
-                <input 
+              />
+              <input 
                 type="range"
                 min="0"
                 max="1000" 
                 value={maxValue}
                 step="10"
-                 onChange={(e) => updateSlider('max', e.target.value ) }
+                onChange={(e) => updateSlider('max', e.target.value ) }
                 className='absolute w-full h-[2px] bg-transparent pointer-events-none appearance-none'
-                />
-                
-              </div>
+              />
+            </div>
           </div>
         </div>
         <div className='w-[80%]'>asd</div>
