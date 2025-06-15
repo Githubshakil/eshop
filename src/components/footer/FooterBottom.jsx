@@ -15,7 +15,9 @@ const FooterBottom = () => {
       <Container>
         <div className="flex border-b border-solid border-[rgba(48,48,48,0.25)]  ">
           <div className="mb-[80px]">
+           <Link to={"/"}>
            <img src="images/logo.png" alt="logo" />
+           </Link>
             <ul className="relative ">
               <li className="  mt-[158px] flex items-center gap-3 group">
                 <div className="flex items-center gap-3 group-hover:scale-120 transition-all duration-300 cursor-pointer group-hover:text-[#ff624c]">
